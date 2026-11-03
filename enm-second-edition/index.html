@@ -3,246 +3,569 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<meta name="description" content="Discover workshops, seminars, webinars, nature camps and biodiversity events organised by TBARC India.">
-<title>Events | TBARC India</title>
-<link rel="icon" type="image/png" href="/favicon.png">
+<meta name="description" content="Five-day hybrid certificate course on Ecological Niche Modelling using MaxEnt, organised by TBARC in association with KAHM Unity Women's College.">
+<meta name="theme-color" content="#075333">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<title>Certificate Course on Ecological Niche Modelling using MaxEnt | TBARC</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=2">
+<link rel="shortcut icon" type="image/png" href="/images/favicon.png?v=2">
+<link rel="apple-touch-icon" href="images/favicon.png?v=2">
 <style>
-:root{--green:#075333;--dark:#043b25;--light:#f0f6ef;--pale:#e4efe3;--text:#202923;--muted:#626a63;--border:#e4ebe4;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.65}body.detail-open{overflow-x:hidden;overflow-y:auto}a{color:inherit}
-.site-header{background:#fff;border-bottom:1px solid var(--border)}.nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;text-decoration:none}.brand-logo{display:block;width:135px;height:30px;object-fit:contain;object-position:left center}.get-involved-btn{display:inline-block;padding:10px 20px;background:#176b45;color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;white-space:nowrap}.get-involved-btn:hover{background:#104d32}
-.hero{background:linear-gradient(90deg,rgba(2,36,20,.92),rgba(4,64,35,.68)),url('../images/hero.jpg') center 45%/cover;color:#fff;padding:78px 24px 82px}.hero-inner{max-width:1120px;margin:auto}.hero-logos{display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:14px;margin:0 0 22px}.hero-logos[hidden]{display:none!important}.hero-logos img{display:block;width:auto;height:auto;max-width:150px;max-height:68px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 12px;box-shadow:0 2px 10px #0002}.hero-label{display:inline-block;background:#ffffff20;border:1px solid #ffffff55;padding:6px 13px;border-radius:30px;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:18px}.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.12;letter-spacing:-1px;max-width:760px;margin:0 0 16px}.hero p{font-size:16px;color:#e2eee4;max-width:650px;margin:0}
-.events-section{padding:64px 24px 80px;background:#f7faf6;min-height:400px}.container{max-width:1120px;margin:auto}.section-heading{text-align:center;max-width:720px;margin:0 auto 34px}.eyebrow{color:var(--green);font-size:11px;text-transform:uppercase;letter-spacing:1.7px;font-weight:800;margin:0 0 8px}.section-heading h2{font-size:clamp(27px,3vw,36px);line-height:1.25;margin:0 0 10px}.section-heading p{color:var(--muted);font-size:14px;margin:0}.event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.event-card{display:block;width:100%;padding:0;text-align:left;font:inherit;color:inherit;background:#fff;border:1px solid var(--border);border-radius:15px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s}.event-card:hover,.event-card:focus-visible{transform:translateY(-4px);box-shadow:0 13px 30px #0753331c;outline:2px solid #75a98a;outline-offset:2px}.event-image-wrap{height:225px;position:relative;background:var(--pale);overflow:hidden}.event-image{width:100%;height:100%;display:block;object-fit:cover;transition:transform .3s}.event-card:hover .event-image{transform:scale(1.035)}.event-category{position:absolute;top:14px;left:14px;background:#075333ed;color:#fff;padding:6px 12px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:.3px}.event-info{padding:20px 20px 22px}.event-title{color:var(--dark);font-size:19px;line-height:1.4;margin:0 0 13px}.event-meta{display:flex;flex-wrap:wrap;gap:8px 15px;color:var(--muted);font-size:12px}.event-meta span{display:flex;align-items:center;gap:6px}.event-meta b{color:var(--green);font-weight:700}.event-empty{grid-column:1/-1;text-align:center;padding:35px;color:var(--muted)}
-/* Original inline SVG icons, matching the supplied reference design */
-.ui-icon{display:inline-block;width:20px;height:20px;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
-.event-meta .ui-icon{width:16px;height:16px;color:var(--green)}
-.highlight-icon .ui-icon{width:27px;height:27px}
-.detail-icon .ui-icon{width:24px;height:24px;color:var(--green)}
-.speaker-socials .ui-icon{width:17px;height:17px;fill:currentColor;stroke:none}
-.back-button .ui-icon,.register-button .ui-icon{width:17px;height:17px}
-
-/* Details view: same page, no new URL or page required */
-.detail-view{display:none;background:#fff}.detail-view.is-active{display:block}.listing-view.is-hidden{display:none}.detail-hero{min-height:285px;display:flex;align-items:center;padding:40px 6%;color:#fff;background:linear-gradient(90deg,rgba(0,25,10,.88),rgba(0,30,10,.28)),url('../images/unais.jpg') center/cover no-repeat}.detail-hero-inner{max-width:1180px;width:100%;margin:auto}
-.detail-hero-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px}
-.detail-hero-copy{min-width:0}
-.detail-collaboration-logos{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;max-width:320px}
-.detail-collaboration-logos[hidden]{display:none!important}
-.detail-collaboration-logos img{display:block;width:auto;height:auto;max-width:135px;max-height:70px;object-fit:contain;background:#fff;border-radius:8px;padding:8px 10px;box-shadow:0 2px 10px #0002}
-@media(max-width:760px){.detail-hero-heading-row{grid-template-columns:1fr;gap:18px}.detail-collaboration-logos{justify-content:flex-start;max-width:100%}.detail-collaboration-logos img{max-width:115px;max-height:58px}}.back-button{display:inline-flex;align-items:center;gap:7px;color:#fff;text-decoration:none;border:1px solid #ffffff80;border-radius:7px;padding:8px 12px;font-size:12px;font-weight:700;background:#ffffff12;margin-bottom:20px;cursor:pointer}.back-button:hover{background:#ffffff25}.detail-category{display:table;background:#075333ed;padding:5px 13px;border-radius:25px;font-size:12px;margin-bottom:12px}.detail-hero h1{font-size:clamp(29px,4vw,44px);line-height:1.15;max-width:760px;margin:0 0 10px}.detail-hero p{margin:0;max-width:680px;color:#eaf2e9}.detail-container{max-width:1180px;margin:auto;padding:32px 24px}.detail-layout{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(260px,.9fr);gap:26px;align-items:start}.section{margin-bottom:32px}.section h2{font-size:21px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--green);line-height:1.25}.section>p{color:#505650;margin:0;white-space:pre-line}.highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;text-align:center}.highlight{padding:5px 3px}.highlight-icon{width:54px;height:54px;display:grid;place-items:center;margin:0 auto 9px;border-radius:50%;background:var(--light);color:var(--green);font-size:25px}.highlight strong{display:block;font-size:13px;margin-bottom:3px}.highlight p{font-size:12px;line-height:1.45;color:#505650;margin:0}.speakers{display:flex;flex-direction:column;gap:18px}.speaker{display:grid;grid-template-columns:170px minmax(0,1fr);align-items:center;gap:22px;padding:22px;border:1px solid #e8eee8;border-radius:16px;background:#fff}.speaker-visual{text-align:center;min-width:0}.speaker-role{display:inline-block;margin:0 auto 13px;padding:6px 11px;border-radius:30px;background:#e7f2e8;color:#245a3b;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}.speaker-photo-wrap{width:100%;max-width:160px;height:175px;position:relative;margin:auto;isolation:isolate}.speaker-photo-wrap:before{content:"";position:absolute;z-index:-1;top:-7px;right:-7px;width:75%;height:75%;background:#dcebdc;border-radius:20px}.speaker-photo{width:100%;height:100%;object-fit:cover;border:4px solid white;border-radius:17px;box-shadow:0 6px 18px #0002;background:#e5eee6}.speaker-info{min-width:0}.speaker-name{display:block;font-size:19px;line-height:1.4;margin-bottom:4px;color:#173e2a}.speaker-description{font-size:13px;color:#555d56;margin:0 0 12px;white-space:pre-line}.speaker-topic{padding:11px 13px;background:#f4f8f3;border-left:4px solid var(--green);border-radius:0 9px 9px 0;font-size:12px;color:#34483a}.speaker-topic b{display:block;color:var(--green);font-size:10px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}.speaker-socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.speaker-socials a{display:inline-block;padding:7px 11px;border:1px solid #dce8de;border-radius:7px;background:#fff;color:#245a3b;font-size:11px;font-weight:700;text-decoration:none}.speaker-socials a:hover{background:var(--green);color:#fff}.audience{display:flex;flex-wrap:wrap;gap:12px}.audience span{background:var(--light);color:var(--green);border-radius:30px;padding:7px 12px;font-size:12px;font-weight:700}
-.card{border:1px solid var(--border);border-radius:13px;padding:22px;margin-bottom:15px;background:#fff}.card h3{font-size:18px;margin:0 0 17px}.register-card{background:#f0f6ee;border:none}.register-button{display:block;background:var(--green);color:#fff;text-decoration:none;text-align:center;border-radius:9px;padding:13px 15px;font-size:14px;font-weight:bold;margin-bottom:14px}.register-button:hover{background:#063f29}.register-button{display:flex;align-items:center;justify-content:center;gap:8px}.register-note{font-size:12px;color:#515951;margin:0}.detail-row{display:flex;gap:13px;margin:0 0 17px;align-items:flex-start}.detail-row:last-child{margin-bottom:0}.detail-icon{width:27px;flex-shrink:0;color:var(--green);font-size:20px;line-height:1.3}.detail-row strong{display:block;font-size:13px}.detail-row p{font-size:13px;color:#555d56;margin:2px 0 0;overflow-wrap:anywhere;white-space:pre-line}.detail-row a{text-decoration:none}.detail-row a:hover{color:var(--green);text-decoration:underline}.footer{background:#bfd6c5;border-top:1px solid var(--border);padding:38px 24px 20px;text-align:left}.footer-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.35fr .8fr 1fr;gap:44px}.footer-brand-row{display:flex;align-items:center;gap:15px;margin-bottom:15px}.footer-logo{display:block;width:76px;height:76px;object-fit:contain;flex:0 0 auto}.footer-brand{font-size:16px;font-weight:800;line-height:1.45;color:#202923;margin:0;max-width:260px}.footer-socials{display:flex;align-items:center;gap:15px;margin-top:12px}.footer-socials a{display:inline-flex;align-items:center;justify-content:center;color:#000;text-decoration:none;width:23px;height:23px}.footer-socials svg{width:21px;height:21px;fill:currentColor}.footer-heading{font-size:15px;font-weight:800;color:#202923;margin:0 0 14px}.footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.footer-links a,.footer-contact a{font-size:13px;color:#202923;text-decoration:none}.footer-links a:hover,.footer-contact a:hover{text-decoration:underline}.footer-contact-row{display:flex;align-items:flex-start;gap:10px;margin:0 0 13px;font-size:13px;color:#202923}.footer-contact-row svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}.footer-contact-row p{font-size:13px;color:#202923;margin:0}.footer-bottom{max-width:1120px;margin:28px auto 0;padding-top:15px;border-top:1px solid #9db9a5;text-align:center}.footer-bottom p{font-size:12px;color:#37483b;margin:0}.footer a{color:inherit}@media(max-width:760px){.footer{padding:30px 20px 18px}.footer-inner{grid-template-columns:1fr;gap:28px}.footer-brand-row{align-items:center}.footer-logo{width:66px;height:66px}.footer-brand{font-size:15px}.footer-bottom{margin-top:25px}}
-@media(max-width:900px){.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-layout{grid-template-columns:minmax(0,1fr) 270px;gap:18px}.speaker{grid-template-columns:145px minmax(0,1fr);gap:18px;padding:18px}}
-@media(max-width:760px){.hero{padding:60px 20px 65px}.hero p{font-size:14px}.events-section{padding:48px 17px 58px}.event-grid{gap:13px}.event-image-wrap{height:175px}.event-info{padding:15px 13px 17px}.event-title{font-size:15px}.event-meta{font-size:11px;gap:7px 10px}.detail-hero{min-height:250px;padding:28px 20px}.detail-container{padding:22px 14px}.detail-layout{grid-template-columns:1fr;gap:5px}.highlights{grid-template-columns:repeat(2,minmax(0,1fr))}.speaker{grid-template-columns:1fr;gap:17px;padding:20px 17px}.speaker-photo-wrap{height:215px;max-width:200px}.speaker-info{text-align:center}.speaker-socials{justify-content:center}.speaker-topic{text-align:left}.card{padding:19px}}
-@media(max-width:420px){.nav-container{padding:10px 12px}.get-involved-btn{padding:8px 11px;font-size:12px}.brand-logo{width:135px;height:30px}.event-grid{grid-template-columns:minmax(0,1fr);gap:16px}.event-image-wrap{height:210px}.event-category{top:10px;left:10px;padding:6px 10px;font-size:10px}.event-info{padding:16px 15px 18px}.event-title{font-size:17px}.event-meta{display:flex;gap:7px 12px;font-size:12px}.speaker{padding:17px 13px}.highlights{gap:10px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
-
-/* Detailed event content styling */
-.detail-container{padding-top:32px;padding-bottom:48px}
-.detail-layout{grid-template-columns:minmax(0,1.9fr) minmax(280px,.9fr);gap:26px}
-.section{margin-bottom:34px}
-.section h2{font-size:21px;margin:0 0 16px;padding-left:12px;border-left:5px solid var(--green);line-height:1.25}
-.section>p{color:#505650;margin:0;white-space:pre-line}
-.highlights{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.highlight-icon{width:54px;height:54px;display:grid;place-items:center;margin:0 auto 9px;border-radius:50%;background:var(--light);color:var(--green);font-size:25px}
-.speakers{gap:22px}
-.speaker{grid-template-columns:190px minmax(0,1fr);gap:26px;padding:24px;border:1px solid #e8eee8;border-radius:17px;transition:transform .25s ease,box-shadow .25s ease;align-items:start}.speaker-visual{display:flex;flex-direction:column;align-items:center}.speaker-identity{margin-top:13px;text-align:center}.speaker-identity .speaker-name{margin:0 0 5px}.speaker-identity .speaker-description{margin:0;font-size:12px;line-height:1.5;color:var(--muted)}.speaker-content{min-width:0}.speaker-content .speaker-topic{margin-bottom:12px}.speaker-content .speaker-bio{margin:0 0 12px}
-.speaker:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(7,83,51,.10)}
-.speaker-visual{min-width:0;text-align:center}
-.speaker-role{margin:0 auto 16px;padding:6px 12px;font-size:10px;letter-spacing:.7px;line-height:1.4}
-.speaker-photo-wrap{max-width:210px;height:215px}
-.speaker-photo-wrap:before{content:"";position:absolute;z-index:-1;top:-10px;right:-10px;width:76%;height:76%;background:#dcebdc;border-radius:25px}
-.speaker-photo-wrap:after{content:"";position:absolute;z-index:-1;bottom:-9px;left:-9px;width:65%;height:65%;background:#f0f6ee;border:2px solid #c8ddcb;border-radius:25px}
-.speaker-photo{border-radius:20px;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.12)}
-.speaker-info{min-width:0;padding:4px 0}
-.speaker-name{font-size:20px;line-height:1.4;margin-bottom:5px;color:#173e2a}
-.speaker-description{font-size:13px;line-height:1.6;color:#555d56;margin:0 0 17px;white-space:pre-line}
-.speaker-topic{padding:14px 16px;background:#f4f8f3;border-left:4px solid var(--green);border-radius:0 10px 10px 0;color:#34483a;font-size:14px;line-height:1.6;font-weight:600}
-.speaker-topic b{display:block;margin-bottom:5px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--green)}
-.speaker-bio{font-size:13px;line-height:1.6;color:#555d56;margin:12px 0 0;white-space:pre-line}
-.speaker-socials{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:14px}
-.speaker-socials a{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border:1px solid #dce8de;border-radius:8px;background:#fff;color:#245a3b;font-size:12px;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
-.speaker-socials a:hover{background:var(--green);color:#fff}
-.card{border:1px solid var(--border);border-radius:13px;padding:22px;margin-bottom:15px;background:#fff}
-.card h3{font-size:18px;margin:0 0 16px}
-.register-card{background:#f0f6ee;border:none}
-.register-button{display:block;background:var(--green);color:#fff;text-decoration:none;text-align:center;border-radius:9px;padding:13px 15px;font-size:14px;font-weight:bold;margin-bottom:14px}
-.register-button:hover{background:#063f29}.register-button{display:flex;align-items:center;justify-content:center;gap:8px}
-.register-note{font-size:12px;color:#515951;margin:0;white-space:pre-line}
-.detail-row{display:flex;gap:14px;margin:0 0 18px}
-.detail-row:last-child{margin-bottom:0}
-.detail-icon{width:30px;flex-shrink:0;color:var(--green);font-size:22px;line-height:1.3}
-.detail-row strong{display:block;font-size:13px}
-.detail-row p{font-size:13px;color:#555d56;margin:2px 0 0;overflow-wrap:anywhere}
-.detail-row a{color:inherit;text-decoration:none}
-.detail-row a:hover{text-decoration:underline;color:var(--green)}
-.audience{display:flex;flex-wrap:wrap;gap:12px}
-.audience span{display:inline-flex;align-items:center;padding:8px 12px;border-radius:25px;background:var(--light);color:var(--green);font-size:12px;font-weight:700}
-@media(max-width:900px){.detail-layout{grid-template-columns:minmax(0,1fr) 270px;gap:18px}.speaker{grid-template-columns:165px minmax(0,1fr);gap:20px;padding:19px}.speaker-photo-wrap{max-width:160px;height:180px}.speaker-name{font-size:17px}}
-@media(max-width:760px){.detail-layout{grid-template-columns:1fr;gap:8px}.highlights{grid-template-columns:repeat(2,minmax(0,1fr))}.speakers{gap:16px}.speaker{grid-template-columns:1fr;gap:22px;padding:20px 17px}.speaker-visual{width:100%}.speaker-identity{margin-top:13px}.speaker-content{width:100%}.speaker-photo-wrap{height:220px;max-width:210px}.speaker-photo-wrap:before{top:-7px;right:-7px;border-radius:20px}.speaker-photo-wrap:after{bottom:-7px;left:-7px;border-radius:20px}.speaker-photo{border-radius:17px}.speaker-info{text-align:center}.speaker-name{font-size:19px}.speaker-description{margin-bottom:15px}.speaker-topic{text-align:left}.speaker-socials{justify-content:center}.card{padding:19px}}
-@media(max-width:360px){.speaker{padding:17px 13px}.speaker-photo-wrap{max-width:190px;height:200px}.speaker-socials{gap:7px}.speaker-socials a{padding:8px 9px;font-size:11px}}
-/* Event status filters and archive links */
-.event-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 auto 28px}
-.event-filter{appearance:none;border:1px solid #d7e4d8;background:#fff;color:#245a3b;padding:10px 18px;border-radius:30px;font:700 13px Arial,Helvetica,sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.event-filter:hover,.event-filter[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
-.event-status{position:absolute;top:14px;right:14px;padding:6px 10px;border-radius:30px;font-size:10px;font-weight:800;letter-spacing:.3px;text-transform:uppercase;box-shadow:0 2px 8px #0002}
-.event-status.upcoming{background:#fff;color:#075333}.event-status.completed{background:#e6e9e6;color:#414a42}
-.detail-status{display:inline-flex;align-items:center;gap:6px;margin:0 0 12px;padding:6px 11px;border-radius:30px;background:#ffffff20;border:1px solid #ffffff55;color:#fff;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px}
-.event-resources{display:grid;gap:10px;margin-top:12px}
-.resource-link{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 12px;border:1px solid #dce8de;border-radius:8px;color:#245a3b;background:#fff;text-decoration:none;font-size:13px;font-weight:700}
-.resource-link:hover{background:var(--green);border-color:var(--green);color:#fff}
-.resource-link[hidden]{display:none!important}
-.report-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
-.report-photo{margin:0;min-width:0;overflow:hidden;border-radius:12px;background:var(--light);border:1px solid var(--border)}
-.report-photo img{display:block;width:100%;height:150px;object-fit:cover}
-.report-photo figcaption{padding:9px 10px;font-size:11px;color:var(--muted);line-height:1.45}
-#detailStatus[hidden],.report-gallery[hidden]{display:none!important}
-.detail-layout.completed-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:26px}
-.detail-layout.completed-layout .left-content{width:100%;max-width:100%;min-width:0}
-.detail-layout.completed-layout #eventDetailsCard{margin-bottom:28px}
-.detail-layout.completed-layout .right-content{display:flex;flex-direction:column;gap:15px;align-items:stretch;min-width:0}
-.detail-layout.completed-layout .right-content .card{margin-bottom:0}
-.detail-layout.completed-layout #speakersSection{margin-bottom:0}
-.detail-layout.completed-layout #completedAboutSection{display:none!important}
-.detail-layout.completed-layout #reportSection{margin:0 0 15px;min-width:0}
-.detail-layout.completed-layout #reportSection .report-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-  /* Hide speakers section for upcoming events if required:
-.detail-layout:not(.completed-layout) #speakersSection {
-  display: none !important;
+:root{
+  --green:#075333;--dark:#043b25;--deep:#022b1b;--light:#f0f6ef;
+  --pale:#e4efe3;--text:#202923;--muted:#626a63;--border:#e4ebe4;
+  --white:#fff;--gold:#d6b66a;--shadow:0 14px 38px rgba(4,59,37,.09);
 }
-*/
-/* Completed-event speaker cards: image on the left; identity, topic and socials stacked on the right. */
-.detail-layout.completed-layout #speakersSection .speaker{grid-template-columns:125px minmax(0,1fr);grid-template-rows:auto auto auto auto;column-gap:16px;row-gap:10px;padding:16px;align-items:start}
-.detail-layout.completed-layout #speakersSection .speaker-visual,
-.detail-layout.completed-layout #speakersSection .speaker-info{display:contents}
-.detail-layout.completed-layout #speakersSection .speaker-role{grid-column:1/-1;grid-row:1;justify-self:start;margin:0 0 2px}
-.detail-layout.completed-layout #speakersSection .speaker-photo-wrap{grid-column:1;grid-row:2 / span 3;max-width:125px;height:145px}
-.detail-layout.completed-layout #speakersSection .speaker-identity{grid-column:2;grid-row:2;margin:0;text-align:left;align-self:start}
-.detail-layout.completed-layout #speakersSection .speaker-identity .speaker-name{text-align:left}
-.detail-layout.completed-layout #speakersSection .speaker-identity .speaker-description{text-align:left;margin-bottom:0}
-.detail-layout.completed-layout #speakersSection .speaker-topic{grid-column:2;grid-row:3;margin:0}
-.detail-layout.completed-layout #speakersSection .speaker-bio{grid-column:2;grid-row:4;margin:0}
-.detail-layout.completed-layout #speakersSection .speaker-socials{grid-column:2;grid-row:5;justify-content:flex-start;margin-top:0}
-.detail-layout.completed-layout #contactCard{display:none!important}
-@media(max-width:900px){.detail-layout.completed-layout{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:18px}.detail-layout.completed-layout #speakersSection .speaker{grid-template-columns:110px minmax(0,1fr);column-gap:12px;row-gap:9px;padding:14px}.detail-layout.completed-layout #speakersSection .speaker-photo-wrap{max-width:110px;height:130px}}
-@media(max-width:760px){
-  .report-gallery,
-  .detail-layout.completed-layout #reportSection .report-gallery{grid-template-columns:1fr}
-  .report-photo img{height:210px}
-  .detail-layout.completed-layout{grid-template-columns:1fr}
-  .detail-layout.completed-layout #speakersSection .speaker{
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
-    gap:20px;
-    padding:20px 17px;
-  }
-  .detail-layout.completed-layout #speakersSection .speaker-visual{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    text-align:center;
-    width:100%;
-    gap:0;
-  }
-  .detail-layout.completed-layout #speakersSection .speaker-role{
-    align-self:center;
-    margin:0 0 16px;
-  }
-  .detail-layout.completed-layout #speakersSection .speaker-photo-wrap{
-    display:block;
-    flex:0 0 auto;
-    width:100%;
-    height:220px;
-    max-width:210px;
-    margin:0 auto 18px;
-  }
-  .detail-layout.completed-layout #speakersSection .speaker-identity{
-    display:block;
-    position:relative;
-    width:100%;
-    max-width:100%;
-    margin:0 auto !important;
-    padding:0;
-    text-align:center;
-    clear:both;
-  }
-  .detail-layout.completed-layout #speakersSection .speaker-identity .speaker-name,
-  .detail-layout.completed-layout #speakersSection .speaker-identity .speaker-description{
-    display:block;
-    width:100%;
-    text-align:center;
-    overflow-wrap:anywhere;
-  }
-  .detail-layout.completed-layout #speakersSection .speaker-identity .speaker-name{margin:0 0 6px}
-  .detail-layout.completed-layout #speakersSection .speaker-identity .speaker-description{margin:0}
-  .detail-layout.completed-layout #speakersSection .speaker-info{
-    display:block;
-    width:100%;
-    min-width:0;
-    text-align:left;
-  }
-  .detail-layout.completed-layout #speakersSection .speaker-topic{margin-bottom:12px}
-  .detail-layout.completed-layout #speakersSection .speaker-socials{
-    justify-content:center;
-    margin-top:14px;
-  }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;font-family:"DM Sans", "Segoe UI", sans-serif;color:var(--text);background:#fff;line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit}
+.site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+.nav-container{max-width:1180px;margin:auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.brand-logo{display:block;width:140px;height:42px;object-fit:contain;object-position:left center}
+.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:23px}
+.nav-links a{font-size:12px;font-weight:700;text-decoration:none;color:#34463a;white-space:nowrap}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;background:var(--green);color:#fff!important;border-radius:7px}
+.menu-toggle{display:none;border:1px solid var(--border);background:#fff;color:var(--green);border-radius:7px;padding:8px 11px;font-size:20px;cursor:pointer}
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:linear-gradient(90deg,rgba(1,35,20,.94),rgba(3,62,35,.78) 58%,rgba(3,50,29,.48)),url('images/heroenm.jpg') center/cover no-repeat}
+.hero:after{content:"";position:absolute;z-index:-1;width:420px;height:420px;border:1px solid #ffffff20;border-radius:50%;right:-100px;bottom:-260px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
+.hero-inner{max-width:1180px;margin:auto;padding:82px 24px 88px}
+.hero-kicker{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid #ffffff55;background:#ffffff16;border-radius:30px;color:#f1f7f0;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:22px}
+.hero-kicker:before{content:none}
+.hero-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:38px}.hero-copy{min-width:0}.hero h1{max-width:850px;margin:0 0 20px;font-size:clamp(36px,5.5vw,64px);line-height:1.1;letter-spacing:-1.8px}.hero-logos{display:flex;flex-direction:column;align-items:center;gap:15px;min-width:150px}.hero-logos img{display:block;width:140px;height:75px;object-fit:contain;background:#fff;border-radius:9px;padding:9px 12px}
+.hero h1 span{color:#d9e9d8}
+.hero-description{max-width:680px;margin:0;color:#e0ece2;font-size:16px;line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:800;transition:.2s}
+.btn-primary{background:#fff;color:var(--green)}
+.btn-primary:hover{background:#eaf2e9;transform:translateY(-2px)}
+.btn-outline{border:1px solid #ffffff8a;color:#fff;background:#ffffff0d}
+.btn-outline:hover{background:#ffffff20}
+.hero-partners{display:none}
+.partner-logo{height:54px;max-width:145px;object-fit:contain;background:#fff;border-radius:8px;padding:7px 10px}
+.partner-caption{font-size:10px;color:#dce9de;letter-spacing:1px;text-transform:uppercase}
+.quick-facts-wrap{position:relative;z-index:2;margin-top:-34px;padding:0 22px}
+.quick-facts{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.fact{padding:21px 23px;display:flex;align-items:center;gap:13px;border-right:1px solid var(--border)}
+.fact:last-child{border-right:0}
+.fact-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:11px;background:var(--light);color:var(--green);font-size:19px}
+.fact-label{display:block;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.fact-value{display:block;color:var(--dark);font-size:13px;font-weight:800;line-height:1.4;margin-top:3px}
+.container{max-width:1120px;margin:auto;padding-left:24px;padding-right:24px}
+.section{padding:76px 0}
+.section.soft{background:#f7faf6}
+.section-heading{max-width:740px;margin:0 auto 38px;text-align:center}
+.eyebrow{margin:0 0 9px;color:var(--green);font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+.section-heading h2{margin:0 0 12px;color:var(--dark);font-size:clamp(27px,3.5vw,38px);line-height:1.2;letter-spacing:-.7px}
+.section-heading p{margin:0;color:var(--muted);font-size:14px}
+.section-title{margin:0 0 17px;color:var(--dark);font-size:25px;line-height:1.3}
+.body-copy{color:#505a52;font-size:14px;line-height:1.9;margin:0 0 14px;text-align:justify}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.about-image{width:100%;height:380px;object-fit:cover;border-radius:16px;box-shadow:var(--shadow);background:var(--pale)}
+.image-caption{font-size:11px;color:var(--muted);margin-top:9px}
+.callout{display:flex;gap:14px;padding:19px 20px;margin-top:23px;background:var(--light);border-left:4px solid var(--green);border-radius:0 10px 10px 0}
+.callout-icon{font-size:23px;color:var(--green);flex:0 0 auto}
+.callout p{margin:0;color:#3d4d40;font-size:13px;line-height:1.7}
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.overview-card{padding:25px 23px;border:1px solid var(--border);border-radius:13px;background:#fff;transition:.2s}
+.overview-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.overview-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:var(--light);color:var(--green);font-size:22px;margin-bottom:17px}
+.overview-card h3{font-size:16px;color:var(--dark);margin:0 0 9px}
+.overview-card p{font-size:12px;color:var(--muted);line-height:1.75;margin:0}
+.participant-tags{display:flex;flex-wrap:wrap;gap:9px}.participant-tags span{display:inline-flex;padding:8px 13px;border-radius:25px;background:var(--light);color:var(--green);font-size:11px;font-weight:700}.outcomes{margin-top:28px;padding:27px 30px;background:var(--deep);color:#fff;border-radius:14px}
+.outcomes h3{font-size:19px;margin:0 0 16px}
+.outcome-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 26px}
+.outcome{display:flex;gap:10px;color:#e2eee4;font-size:12px;line-height:1.6}
+.outcome:before{content:"✓";color:#b9d7b9;font-weight:900}
+.schedule{max-width:850px;margin:auto;position:relative}
+.schedule:before{content:"";position:absolute;left:91px;top:18px;bottom:18px;width:2px;background:#dce8dc}
+.schedule-item{position:relative;display:grid;grid-template-columns:72px 1fr;gap:38px;padding:0 0 24px}
+.day-marker{position:relative;z-index:1;width:72px;height:72px;display:grid;place-items:center;background:var(--green);color:#fff;border:5px solid #eaf2e9;border-radius:50%;font-size:12px;font-weight:800;text-align:center;line-height:1.2}
+.day-content{padding:17px 21px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.day-content h3{margin:0 0 6px;color:var(--dark);font-size:16px}
+.day-content p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.day-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;color:var(--green);font-size:10px;font-weight:800}
+.syllabus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.module{display:flex;gap:16px;padding:20px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.module-number{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;background:var(--light);color:var(--green);border-radius:10px;font-size:13px;font-weight:900}
+.module h3{font-size:14px;color:var(--dark);margin:1px 0 6px}
+.module p{font-size:12px;color:var(--muted);line-height:1.65;margin:0}
+.syllabus-note{margin-top:20px;padding:15px 18px;background:#f7faf6;border-radius:9px;color:var(--muted);font-size:11px}
+.organisation-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.organisation-card{padding:28px;border:1px solid var(--border);border-radius:14px;background:#fff}
+.org-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.org-logo{width:70px;height:70px;object-fit:contain;padding:7px;border:1px solid var(--border);border-radius:10px;background:#fff}
+.org-head h3{margin:0;color:var(--dark);font-size:17px;line-height:1.35}
+.org-head span{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+.organisation-card p{margin:0;color:#566057;font-size:12px;line-height:1.85;text-align:justify}
+.org-link{display:inline-flex;margin-top:17px;color:var(--green);font-size:12px;font-weight:800;text-decoration:none}
+.org-link:hover{text-decoration:underline}
+.register-band{padding:56px 24px;background:linear-gradient(115deg,var(--deep),var(--green));color:#fff;text-align:center}
+.register-band h2{margin:0 0 10px;font-size:clamp(25px,3.4vw,36px)}
+.register-band p{max-width:620px;margin:0 auto 22px;color:#e0ece2;font-size:13px}
+.register-band .btn{background:#fff;color:var(--green)}
+.footer{background:#bfd6c5;border-top:1px solid var(--border);padding:38px 24px 20px;text-align:left}
+.footer-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.35fr .8fr 1fr;gap:44px}
+.footer-brand-row{display:flex;align-items:center;gap:15px;margin-bottom:15px}
+.footer-logo{display:block;width:76px;height:76px;object-fit:contain;flex:0 0 auto}
+.footer-brand{font-size:14px;font-weight:800;line-height:1.45;color:#202923;margin:0;max-width:260px}
+.footer-socials{display:flex;align-items:center;gap:15px;margin-top:12px}
+.footer-socials a{display:inline-flex;align-items:center;justify-content:center;color:#000;text-decoration:none;width:23px;height:23px}
+.footer-socials svg{width:21px;height:21px;fill:currentColor}
+.footer-heading{font-size:14px;font-weight:800;color:#202923;margin:0 0 14px}
+.footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.footer-links a,.footer-contact a{font-size:13px;color:#202923;text-decoration:none}
+.footer-links a:hover,.footer-contact a:hover{text-decoration:underline}
+.footer-contact-row{display:flex;align-items:flex-start;gap:10px;margin:0 0 13px;font-size:13px;color:#202923}
+.footer-contact-row svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.footer-contact-row p{font-size:13px;color:#202923;margin:0}
+.footer-bottom{max-width:1120px;margin:28px auto 0;padding-top:15px;border-top:1px solid #9db9a5;text-align:center}
+.footer-bottom p{font-size:11px;color:#37483b;margin:0}
+.footer a{color:inherit}
+@media(max-width:760px){.footer{padding:30px 20px 18px}.footer-inner{grid-template-columns:1fr;gap:28px}.footer-brand-row{align-items:center}.footer-logo{width:66px;height:66px}.footer-brand{font-size:14px}.footer-bottom{margin-top:25px}}
+@media(max-width:900px){
+ .nav-links{gap:12px}.nav-links a{font-size:11px}
+ .quick-facts{grid-template-columns:repeat(2,1fr)}
+ .fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--border)}
+ .-grid{gap:25px}.overview-grid{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:760px){.event-filters{gap:7px;margin-bottom:22px}.event-filter{padding:9px 13px;font-size:12px}.event-status{top:8px;right:8px;padding:5px 7px;font-size:9px}}
+@media(max-width:700px){
+ .hero-heading-row{grid-template-columns:1fr;gap:25px}.hero-logos{flex-direction:row;justify-content:flex-start;flex-wrap:wrap}.hero-logos img{width:112px;height:62px}
+ .nav-container{padding:9px 15px}.brand-logo{width:125px;height:38px}
+ .menu-toggle{display:block}.nav-links{display:none;position:absolute;top:59px;left:0;right:0;padding:15px 20px 20px;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 12px 18px #0000000d;align-items:stretch;flex-direction:column;gap:0}
+ .nav-links.open{display:flex}.nav-links a{padding:11px 4px;font-size:13px}.nav-links .nav-cta{margin-top:8px;padding:12px}
+ .hero-inner{padding:65px 20px 76px}.hero h1{font-size:clamp(35px,9vw,49px);letter-spacing:-1px}.hero-description{font-size:14px}
+ .quick-facts-wrap{padding:0 14px;margin-top:-27px}.fact{padding:15px 13px;gap:9px}.fact-icon{width:36px;height:36px;flex-basis:36px;font-size:16px}.fact-value{font-size:11px}
+ .container{padding-left:18px;padding-right:18px}.section{padding:57px 0}
+  /* About section: stack content on mobile instead of retaining the desktop two-column grid */
+  .about-grid{grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}
+  .about-grid > div{min-width:0;width:100%}
+  .about-image{display:block;width:100%;height:260px;object-fit:cover}
+  .body-copy{text-align:left}
+ .overview-grid{grid-template-columns:1fr 1fr;gap:11px}.overview-card{padding:18px 15px}.overview-card h3{font-size:14px}
+ .outcome-list{grid-template-columns:1fr}.outcomes{padding:22px 20px}
+ .schedule:before{left:31px}.schedule-item{grid-template-columns:64px 1fr;gap:12px}.day-marker{width:64px;height:64px}
+ .day-content{padding:14px}.syllabus-grid{grid-template-columns:1fr}
+ .organisation-grid{grid-template-columns:1fr}
+ .footer-inner{grid-template-columns:1fr;gap:25px}
+}
+@media(max-width:390px){
+ .quick-facts{grid-template-columns:1fr}.fact{border-right:0;border-bottom:1px solid var(--border)!important}.fact:last-child{border-bottom:0!important}
+ .overview-grid{grid-template-columns:1fr}
+ .hero-actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Detailed syllabus layout */
+.course-objective{max-width:940px;margin:0 auto 28px;padding:24px 27px;background:#fff;border:1px solid var(--border);border-left:5px solid var(--green);border-radius:12px;box-shadow:0 7px 22px rgba(4,59,37,.045)}
+.course-objective h3{margin:0 0 8px;color:var(--dark);font-size:17px}
+.course-objective p{margin:0;color:#505a52;font-size:13px;line-height:1.85}
+.syllabus-days{max-width:940px;margin:auto;display:grid;gap:17px}
+.syllabus-day{padding:24px 26px;background:#fff;border:1px solid var(--border);border-radius:13px;box-shadow:0 7px 22px rgba(4,59,37,.035)}
+.syllabus-day-heading{display:flex;align-items:center;gap:15px;padding-bottom:17px;border-bottom:1px solid var(--border)}
+.syllabus-day-number{width:58px;height:58px;flex:0 0 58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:var(--green);color:#fff;border-radius:12px;line-height:1}
+.syllabus-day-number .day-word{font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;opacity:.9;margin-bottom:3px}
+.syllabus-day-number .day-index{font-size:25px;font-weight:900;letter-spacing:-.8px}
+.syllabus-day-label{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:7px}
+.syllabus-meta{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border:1px solid #e2ebe1;border-radius:6px;background:#f7faf6;color:#45634d;font-size:10px;font-weight:700;line-height:1.3;letter-spacing:0;text-transform:none;white-space:nowrap}
+.syllabus-meta.date{background:#eaf3e9;border-color:#d8e8d7;color:var(--green);font-weight:800}
+.syllabus-meta.mode{background:#fff;border-color:#dce7dc;color:var(--dark)}
+.syllabus-meta svg{width:12px;height:12px;flex:0 0 12px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.syllabus-day-heading h3{margin:0;color:var(--dark);font-size:18px;line-height:1.35}
+.syllabus-columns{display:grid;grid-template-columns:1.25fr .85fr;gap:25px;padding-top:17px}
+.syllabus-columns h4{margin:0 0 9px;color:var(--green);font-size:12px;letter-spacing:.5px;text-transform:uppercase}
+.syllabus-columns ul{margin:0;padding-left:19px;color:#505a52;font-size:12px;line-height:1.8}
+.syllabus-columns li{padding-left:2px;margin-bottom:4px}
+.learning-outcomes{padding:15px 17px;background:#f4f8f3;border-radius:10px}
+.learning-outcomes ul{padding-left:17px}
+.prerequisites{max-width:940px;margin:22px auto 0;padding:20px 23px;display:flex;gap:15px;align-items:flex-start;background:#eaf3e9;border:1px solid #d9e8d9;border-radius:12px}
+.prerequisites-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;background:var(--green);color:#fff;border-radius:50%;font-weight:900}
+.prerequisites h3{margin:0 0 4px;color:var(--dark);font-size:15px}
+.prerequisites p{margin:0;color:#465448;font-size:12px;line-height:1.7}
+@media(max-width:700px){.syllabus-day{padding:19px 16px}.syllabus-day-number{width:52px;height:52px;flex-basis:52px}.syllabus-day-number .day-index{font-size:23px}.syllabus-meta{font-size:9px;padding:5px 7px}.syllabus-day-heading{align-items:flex-start;gap:12px}.syllabus-day-heading h3{font-size:16px}.syllabus-columns{grid-template-columns:1fr;gap:16px}.learning-outcomes{padding:14px}.course-objective{padding:20px 18px}.prerequisites{padding:17px}}
 
 
-/* Text alignment correction: justify event descriptions and speaker bios */
-.event-description,
-.event-about,
-.about-event,
-.speaker-bio,
-.speaker-description,
-.speaker-content .bio,
-.speaker-content p.description {
-  text-align: justify;
-  text-justify: inter-word;
+/* Typography refinement */
+h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading h2,.section-title,.syllabus-day-heading h3{
+  font-family:"Manrope","DM Sans","Segoe UI",sans-serif;
+}
+.hero h1{font-weight:800;letter-spacing:-1.5px}
+.section-heading h2,.section-title{font-weight:800;letter-spacing:-.6px}
+.body-copy{font-size:14px;line-height:1.95}
+.overview-card p,.syllabus-columns ul,.organisation-card p{font-size:13px;line-height:1.85}
+
+
+/* Custom inline SVG icons — consistent line weight and visual language */
+.course-icon{display:block;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.fact-icon .course-icon{width:20px;height:20px}
+.overview-icon .course-icon{width:23px;height:23px}
+.fact-icon,.overview-icon{line-height:0}
+
+
+/* Floating back-to-top button */
+.back-to-top{
+  position:fixed;right:22px;bottom:22px;z-index:150;
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  border:0;border-radius:50%;background:var(--green);color:#fff;
+  box-shadow:0 5px 18px rgba(4,59,37,.24);cursor:pointer;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(10px);transition:opacity .25s ease,transform .25s ease,background .2s ease,visibility .25s;
+}
+.back-to-top.visible{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.back-to-top:hover{background:var(--dark);transform:translateY(-3px)}
+.back-to-top:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.back-to-top svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:700px){.back-to-top{right:16px;bottom:16px;width:44px;height:44px}}
+
+
+/* Section colour rhythm: restrained forest-green and off-white palette */
+#about-event{background:#f5f8f4}
+#overview{background:#073f2b;color:#fff}
+#overview .section-heading h2,
+#overview .section-heading p,
+#overview .section-heading .eyebrow,
+#overview .who-can-participate .section-title{color:#fff}
+#overview .overview-card{background:#fff;border-color:#dce7de}
+#overview .participant-tags span{background:#eaf2e9;color:#174b32}
+#overview .prerequisites{background:#eaf2e9;border-color:#d6e5d7}
+#overview .outcomes{background:#f5f8f4;color:#203027;border:1px solid #dce7de}
+#overview .outcomes h3{color:#174b32}
+#overview .outcome{color:#46564a}
+#overview .outcome:before{color:#287348}
+#syllabus{background:#073f2b}
+#syllabus .section-heading h2,
+#syllabus .section-heading p,
+#syllabus .section-heading .eyebrow{color:#fff}
+#syllabus .course-objective,
+#syllabus .syllabus-day{background:#fff}
+#syllabus .syllabus-note{background:#edf3ed}
+#organisers{background:#f5f8f4}
+#registration{background:linear-gradient(115deg,#022b1b,#075333)}
+/* Floating register, WhatsApp and back-to-top controls */
+.floating-actions{
+  position:fixed;right:20px;bottom:82px;z-index:160;
+  display:flex;flex-direction:column;align-items:center;gap:11px
+}
+.floating-register{
+  width:52px;height:52px;border-radius:50%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-decoration:none;text-align:center;
+  background:#fff;color:#075333;border:2px solid #d6b66a;
+  box-shadow:0 5px 18px rgba(4,59,37,.22);line-height:1.05;
+  transition:transform .2s,background .2s
+}
+.floating-register:hover{transform:translateY(-3px);background:#f1f6ef}
+.floating-register .register-small{font-size:8px;font-weight:800;letter-spacing:.35px;text-transform:none}
+.floating-register .register-large{font-size:15px;font-weight:900;margin-top:3px}
+.floating-whatsapp{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  background:#25D366;color:#fff;text-decoration:none;
+  box-shadow:0 4px 15px rgba(0,0,0,.2);transition:transform .2s,background .2s
+}
+.floating-whatsapp:hover{transform:translateY(-3px);background:#1ebe5d}
+.floating-whatsapp svg{width:27px;height:27px;fill:currentColor}
+.floating-actions a:focus-visible{outline:3px solid #d6b66a;outline-offset:4px}
+.back-to-top{right:29px;bottom:20px}
+@media(max-width:700px){
+  .floating-actions{right:13px;bottom:76px;gap:9px}
+  .floating-register{width:52px;height:52px}
+  .floating-whatsapp{width:52px;height:52px}
+  .floating-whatsapp svg{width:27px;height:27px}
+  .back-to-top{right:20px;bottom:17px;width:52px;height:52px}
 }
 
 
-/* Standalone programme page */
-.listing-view{display:none!important}
-.detail-view.is-active{display:block!important}
+/* Shared vertical alignment for Register, WhatsApp and Back to Top */
+.floating-actions{
+  right:20px;
+  align-items:center;
+}
+
+/* Show all three floating buttons together only after the visitor scrolls */
+.floating-actions{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(12px);
+  transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+.floating-actions.visible{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+.floating-actions .back-to-top{
+  position:static;
+  right:auto;bottom:auto;z-index:auto;
+  width:52px;height:52px;flex:0 0 52px;
+  margin:0;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(10px);
+}
+.floating-actions .back-to-top.visible{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:translateY(0);
+}
+@media(max-width:700px){
+  .floating-actions{right:13px;align-items:center}
+  .floating-actions .back-to-top{width:52px;height:52px;flex-basis:52px}
+}
+
 </style>
 </head>
 <body>
-<header class="site-header"><div class="nav-container"><a class="brand" href="https://tbarc.in" aria-label="TBARC India home"><img src="../images/logo.png" alt="TBARC Logo" class="brand-logo"></a><a href="https://forms.gle/cvtcP5pCJYYg6xUD7" class="get-involved-btn" target="_blank" rel="noopener noreferrer">Get Involved</a></div></header>
+<header class="site-header">
+  <div class="nav-container">
+    <a class="brand" href="https://tbarc.in" aria-label="TBARC India home"><img src="images/logo.png" alt="TBARC India" class="brand-logo"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about-event">About</a>
+      <a href="#overview">Course Overview</a>
+      <a href="#syllabus">Syllabus</a>
+      <a class="nav-cta" href="https://forms.gle/n5pRqGTuPvFTfF8d8">Registration ↗</a>
+    </nav>
+  </div>
+</header>
 
-<div class="listing-view" id="listingView">
-  <section class="hero"><div class="hero-inner"><div class="hero-logos" id="heroCollaborationLogos" aria-label="Collaborating organisations" hidden></div><span class="hero-label">TBARC India · Events</span><h1>Events & Experiences</h1><p>Discover workshops, seminars, webinars, nature camps and other programmes bringing people together for biodiversity, research and conservation.</p></div></section>
-  <main class="events-section"><div class="container"><div class="section-heading"><h2>Explore Our Events</h2><p>Select a programme to explore its details, speakers, schedule and registration information.</p></div><div class="event-filters" id="eventFilters" role="group" aria-label="Filter events">
-  <button type="button" class="event-filter" data-filter="all" aria-pressed="true">All Events</button>
-  <button type="button" class="event-filter" data-filter="upcoming" aria-pressed="false">Upcoming</button>
-  <button type="button" class="event-filter" data-filter="completed" aria-pressed="false">Completed</button>
-</div>
-<div class="event-grid" id="eventGrid"></div></div></main>
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-heading-row">
+      <div class="hero-copy">
+        <div class="hero-kicker">Certificate Course</div>
+        <h1>5-Day Hybrid Certificate Course on <span>Ecological Niche Modelling using MaxEnt</span></h1>
+        <p class="hero-description">Build a foundation in ecological niche modelling and learn how species occurrence data and environmental variables can be used to understand and predict species distributions.</p>
+      </div>
+      <div class="hero-logos" aria-label="Organising and collaborating institutions">
+        <img src="images/logo.png" alt="TBARC India logo">
+        <img src="images/unitylogo.png" alt="KAHM Unity Women's College logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="quick-facts-wrap" id="event-details">
+  <div class="quick-facts">
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17"/></svg></div><div><span class="fact-label">Date</span><span class="fact-value">8–13 December 2026</span></div></div>
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><span class="fact-label">Venue</span><span class="fact-value">KAHM Unity Women's College, Manjeri</span></div></div>
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20zM16 5.5a3 3 0 0 1 0 5.8M17 15h.5a3 3 0 0 1 3 3v2"/></svg></div><div><span class="fact-label">Number of Seats</span><span class="fact-value">20</span></div></div>
+    <div class="fact"><div class="fact-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14M5 9h14M8 5c5 0 7 2 7 5s-2 5-7 5l8 6"/></svg></div><div><span class="fact-label">Registration Fee</span><span class="fact-value">₹3,000/-</span></div></div>
+  </div>
 </div>
 
-<div class="detail-view" id="detailView" aria-live="polite">
-  <header class="detail-hero" id="detailHero"><div class="detail-hero-inner"><button type="button" class="back-button" id="backButton"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All Events</button><span class="detail-status" id="detailStatus"></span><div class="detail-hero-heading-row"><div class="detail-hero-copy"><span class="detail-category" id="detailCategory"></span><h1 id="detailTitle"></h1><p id="detailSummary"></p></div><div class="detail-collaboration-logos" id="detailCollaborationLogos" aria-label="Collaborating organisations" hidden></div></div></div></header>
-  <main class="detail-container"><div class="detail-layout" id="detailLayout"><div class="left-content">
-    <div class="card" id="eventDetailsCard"><h3>Event Details</h3><div id="detailFacts"></div></div>
-    <section class="section" id="completedAboutSection" hidden><h2>About the Event</h2><p id="completedAbout"></p></section>
-    <section class="section" id="reportSection"><h2 id="detailAboutHeading">About the Event</h2><p id="detailAbout"></p><div class="report-gallery" id="reportGallery" hidden></div></section>
-    <section class="section" id="highlightsSection"><h2>Event Highlights</h2><div class="highlights" id="detailHighlights"></div></section>
-    <section class="section" id="speakersSection"><h2>Speakers</h2><div class="speakers" id="detailSpeakers"></div></section>
-    <section class="section" id="audienceSection"><h2>Who Can Participate?</h2><div class="audience" id="detailAudience"></div></section>
-  </div><aside class="right-content" id="rightContent">
-    <div class="card register-card" id="registrationCard"><h3 id="registrationHeading">Register for the Event</h3><a class="register-button" id="registerButton" href="#" target="_blank" rel="noopener noreferrer">Register Now <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><p class="register-note" id="registerNote"></p></div>
-    <div class="card" id="contactCard"><h3>Contact</h3><div id="detailContact"></div></div>
-  </aside></div></main>
-</div>
+<section class="section" id="about-event">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow"></p>
+        <h2 class="section-title">About the Course</h2>
+        <p class="body-copy">Ecological Niche Modelling (ENM) is an important approach in ecology and biodiversity research. It uses species occurrence records and environmental variables to identify areas with suitable environmental conditions for a species. These models provide valuable insights into species distributions, habitat suitability, potential range shifts and ecological responses to environmental change. ENM has wide-ranging applications in biodiversity conservation, invasive species management, endangered species protection, habitat restoration, climate change impact assessment, protected area planning and the identification of potential invasion hotspots. It also supports evidence-based conservation strategies and informed ecological decision-making.</p>
+        <p class="body-copy">The <b>Tropical Biodiversity Action and Research Centre (TBARC)</b>, in association with the <b>Postgraduate and Research Department of Botany, Korambayil Ahamed Haji Memorial Unity Women's College (Autonomous), Manjeri</b>, organises a Five-Day Hybrid Certificate Course on Ecological Niche Modelling Using MaxEnt.</p>
+        <p class="body-copy">This five-day hybrid certificate course introduces participants to the fundamental concepts, essential datasets and analytical workflows involved in ecological niche modelling using MaxEnt. The programme is designed to bridge ecological understanding with geospatial data processing, species occurrence data preparation, environmental variable selection, model development, validation and interpretation. Through a combination of expert-led sessions and practical training, participants will gain an understanding of how ENM can be applied to real-world ecological and biodiversity research questions.</p>
+        <div class="callout"><div class="callout-icon">✦</div><p><strong>Learning approach:</strong> A combination of online learning and in-person practical sessions covering ecological niche modelling using MaxEnt, geospatial analysis with QGIS, and statistical modelling techniques in R.</p></div>
+      </div>
+      <div>
+        <img class="about-image" src="images/bodyenm.jpg" alt="Ecological modelling and biodiversity research" onerror="this.onerror=null;this.src='images/hero.jpg'">
+        <div class="image-caption">Ecological niche modelling for biodiversity research and conservation planning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="overview">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Course overview</p>
+      <h2>Course Overview</h2>
+    </div>
+    <div class="overview-grid">
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5M8 10.8h5.6M10.8 8v5.6"/></svg></div><h3>Introduction to ENM and MaxEnt</h3><p>Introduction to Ecological Niche Modeling (ENM) and MaxEnt, ecological niche concepts and Species Distribution Models (SDMs).</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 8h4M7 12h8"/></svg></div><h3>Software Installation</h3><p>Installation and use of QGIS, R, RStudio, Java and MaxEnt.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg></div><h3>Data Acquisition</h3><p>Species occurrence and environmental data acquisition from relevant databases.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 8.5 4 15 7l6-3v15l-6 3-6.5-3L3 22zM8.5 4v15M15 7v15"/></svg></div><h3>Spatial Data Processing</h3><p>Spatial data processing and GIS analysis using QGIS and R.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg></div><h3>MaxEnt Model Development</h3><p>MaxEnt model development, validation and habitat suitability mapping.</p></article>
+      <article class="overview-card"><div class="overview-icon"><svg class="course-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 5-6"/></svg></div><h3>Future Projections and Learning Resources</h3><p>Future climate projections, case studies, lecture notes and tutorial videos.</p></article>
+    </div>
+    <div class="who-can-participate" style="margin-top:34px">
+      <h3 class="section-title" style="font-size:21px;margin-bottom:14px">Who Can Participate?</h3>
+      <div class="participant-tags">
+        <span>Undergraduate Students</span><span>Postgraduate Students</span>
+        <span>Diploma Students</span><span>Research Scholars</span>
+        <span>Researchers</span><span>Faculty Members</span>
+        <span>Ecology & Environmental Science</span><span>Forestry & Agriculture</span>
+        <span>Biodiversity & Conservation</span>
+      </div>
+    </div>
+    <div class="prerequisites">
+      <div class="prerequisites-icon">✓</div>
+      <div><h3>Prerequisites</h3><p>Basic knowledge of ecology, biodiversity or related life sciences. No prior experience in GIS, R or MaxEnt is required.</p></div>
+    </div>
+    <div class="outcomes">
+      <h3>What Participants Will Learn</h3>
+      <div class="outcome-list">
+        <div class="outcome">Understand the fundamental concepts of ecological niche modelling.</div>
+        <div class="outcome">Prepare and organise species occurrence data.</div>
+        <div class="outcome">Work with environmental and bioclimatic predictor layers.</div>
+        <div class="outcome">Understand the workflow of MaxEnt modelling.</div>
+        <div class="outcome">Interpret habitat suitability maps and model outputs.</div>
+        <div class="outcome">Recognise applications of ENM in ecology and conservation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section soft" id="syllabus">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Course syllabus</p>
+      <h2>Detailed Course Syllabus</h2>
+      <p>A five-day learning programme combining theoretical sessions and practical training in ecological niche modelling.</p>
+    </div>
+
+    <div class="course-objective">
+      <h3>Course Objective</h3>
+      <p>Provide participants with theoretical knowledge and hands-on training in Ecological Niche Modeling (ENM) using MaxEnt, QGIS and R, enabling them to independently develop, evaluate and interpret species distribution models for conservation, ecology and climate change applications.</p>
+    </div>
+
+    <div class="syllabus-days">
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number"><span class="day-word">Day</span><span class="day-index">01</span></div><div><div class="syllabus-day-label"><span class="syllabus-meta date">December 8</span><span class="syllabus-meta">7:30 pm – 9:30 pm</span><span class="syllabus-meta">2 hours</span><span class="syllabus-meta mode">Online</span></div><h3>Fundamentals of Ecological Niche Modeling</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Introduction to Ecological Niche Modeling (ENM)</li>
+            <li>Ecological niche concepts and Species Distribution Models (SDMs)</li>
+            <li>Overview of modelling approaches (presence-only, presence–absence, machine learning)</li>
+            <li>Introduction to MaxEnt: principles, assumptions, advantages and disadvantages</li>
+            <li>Applications of ENM in biodiversity conservation, invasive species, climate change and restoration</li>
+            <li>Limitations of ENM and situations where ENM should not be applied</li>
+            <li>Discussion of published case studies and complete ENM workflow</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Understand the concepts and workflow of ENM.</li>
+            <li>Differentiate modelling approaches and identify appropriate applications.</li>
+            <li>Recognize strengths and limitations of MaxEnt.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number"><span class="day-word">Day</span><span class="day-index">02</span></div><div><div class="syllabus-day-label"><span class="syllabus-meta date">December 9</span><span class="syllabus-meta">7:30 pm – 9:30 pm</span><span class="syllabus-meta">2 hours</span><span class="syllabus-meta mode">Online</span></div><h3>Software Installation and Data Acquisition</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Introduction to spatial data: raster and vector</li>
+            <li>Installation and configuration of QGIS, R, RStudio, Java and MaxEnt</li>
+            <li>Downloading occurrence data (GBIF, iNaturalist, India Biodiversity Portal)</li>
+            <li>Downloading environmental variables (WorldClim, CHELSA and related databases)</li>
+            <li>Basic processing and management of spatial datasets</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Install and configure all required software.</li>
+            <li>Acquire and organize occurrence and environmental datasets.</li>
+            <li>Understand raster and vector data structures.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number"><span class="day-word">Day</span><span class="day-index">03</span></div><div><div class="syllabus-day-label"><span class="syllabus-meta date">December 10</span><span class="syllabus-meta">7:30 pm – 9:30 pm</span><span class="syllabus-meta">2 hours</span><span class="syllabus-meta mode">Online</span></div><h3>Spatial Data Processing Using QGIS and R</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Working with raster and vector data in QGIS</li>
+            <li>Projection, clipping, buffering and extraction tools</li>
+            <li>Introduction to R and RStudio</li>
+            <li>Importing, cleaning and visualizing spatial datasets in R</li>
+            <li>Preparation of study area and modelling inputs</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Perform essential GIS operations.</li>
+            <li>Use basic R commands for ENM workflows.</li>
+            <li>Prepare datasets for modelling.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number"><span class="day-word">Day</span><span class="day-index">04</span></div><div><div class="syllabus-day-label"><span class="syllabus-meta date">December 12</span><span class="syllabus-meta">9:30 am – 4:30 pm</span><span class="syllabus-meta">7 hours</span><span class="syllabus-meta mode">Hands-on training</span></div><h3>Building MaxEnt Models</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Occurrence data collection from field surveys and online repositories</li>
+            <li>Data cleaning and spatial thinning</li>
+            <li>Environmental variable selection and multicollinearity assessment</li>
+            <li>Feature Classes and Regularization Multiplier selection</li>
+            <li>Running MaxEnt models</li>
+            <li>Interpreting response curves, jackknife analysis and habitat suitability maps</li>
+            <li>Theory and practical on model validation (AUC, ROC, Partial ROC, TSS, Cohen's Kappa, Sensitivity and Specificity)</li>
+            <li>Threshold selection and uncertainty</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Develop robust MaxEnt models.</li>
+            <li>Optimize model parameters.</li>
+            <li>Interpret model outputs correctly.</li>
+            <li>Evaluate model performance using standard metrics.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="syllabus-day">
+        <div class="syllabus-day-heading"><div class="syllabus-day-number"><span class="day-word">Day</span><span class="day-index">05</span></div><div><div class="syllabus-day-label"><span class="syllabus-meta date">December 12</span><span class="syllabus-meta">9:30 am – 4:30 pm</span><span class="syllabus-meta">7 hours</span><span class="syllabus-meta mode">Hands-on training</span></div><h3>Future Projection, Mapping, Visualization and Case Study</h3></div></div>
+        <div class="syllabus-columns">
+          <div><h4>Topics Covered</h4><ul>
+            <li>Future climate projections</li>
+            <li>Habitat suitability map generation</li>
+            <li>Map layout preparation in QGIS</li>
+            <li>Visualization and interpretation of outputs</li>
+            <li>Individual case study</li>
+            <li>Participant presentation</li>
+          </ul></div>
+          <div class="learning-outcomes"><h4>Learning Outcomes</h4><ul>
+            <li>Generate future projections.</li>
+            <li>Produce publication-quality maps and visualizations.</li>
+            <li>Complete and present an ENM case study.</li>
+          </ul></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="organisers">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Organisers & collaborators</p>
+      <h2>About the organising institutions</h2>
+      <p>The institutions supporting this learning programme.</p>
+    </div>
+    <div class="organisation-grid">
+      <article class="organisation-card">
+        <div class="org-head"><img class="org-logo" src="images/logo.png" alt="TBARC logo"><div><h3>Tropical Biodiversity Action and Research Centre (TBARC)</h3><span>Organiser · Nilambur, Kerala</span></div></div>
+        <p>Tropical Biodiversity Action and Research Centre (TBARC) is an organisation working to promote biodiversity research, conservation awareness and scientific engagement. Through training programmes, workshops, research initiatives and outreach activities, TBARC aims to connect students, researchers and communities with emerging themes and methods in biodiversity science.</p>
+        <a class="org-link" href="https://tbarc.in" target="_blank" rel="noopener">tbarc.in ↗</a>
+      </article>
+      <article class="organisation-card">
+        <div class="org-head"><img class="org-logo" src="images/unitylogo.png" alt="Unity Women's College logo"><div><h3>Korambayil Ahamed Haji Memorial Unity Women's College (Autonomous), Manjeri</h3><span>Organiser · Manjeri, Kerala</span></div></div>
+        <p>KAHM Unity Women's College, Manjeri, established in 1991 by MECA, is the first women’s higher education institution in Malappuram district. Set on a 17-acre campus, the autonomous college is affiliated with the University of Calicut and serves 1,700+ students through 10 departments and 75+ faculty members. It holds NAAC A Grade accreditation.</p>
+        <a class="org-link" href="https://unitywomenscollege.ac.in/" target="_blank" rel="noopener">unitywomenscollege.ac.in ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="register-band" id="registration">
+  <h2>Ready to explore ecological niche modelling?</h2>
+  <p>Join the five-day hybrid certificate course and develop your understanding of MaxEnt and its applications in ecological research.</p>
+  <a class="btn" href="https://forms.gle/n5pRqGTuPvFTfF8d8" target="_blank" rel="noopener">Register Now <span aria-hidden="true">→</span></a>
+</section>
+</main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand-column">
-      <div class="footer-brand-row">
-        <a href="https://tbarc.in" aria-label="TBARC India home"><img src="../images/logo.png" alt="TBARC logo" class="footer-logo"></a>
-        <div class="footer-brand">Tropical Biodiversity Action and Research Centre</div>
-      </div>
+      <div class="footer-brand-row"><a href="https://tbarc.in" aria-label="TBARC India home"><img src="images/logo.png" alt="TBARC logo" class="footer-logo"></a><div class="footer-brand">Tropical Biodiversity Action and Research Centre</div></div>
       <div class="footer-socials" aria-label="Social media links">
         <a href="https://www.facebook.com/tbarcindia" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H6.8v3.2h2.9V21z"/></svg></a>
         <a href="https://www.instagram.com/tbarcindia" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.9a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 2.2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.1-3.7a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg></a>
@@ -256,255 +579,68 @@
         <a href="https://tbarc.in/">Home</a>
         <a href="https://tbarc.in/blog">Blog</a>
         <a href="https://tbarc.in/gallery">Gallery</a>
-        <a href="https://tbarc.in/downloads">Downloads</a>
-        <a href="https://tbarc.in/videos">Videos</a>
+        <a href="https://forms.gle/n5pRqGTuPvFTfF8d8">Registration</a>
       </nav>
     </div>
     <div class="footer-contact">
       <h3 class="footer-heading">Contact Us</h3>
       <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></div>
       <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><p>Appolo, Mampad College P.O.,</br> Nilambur, Keralam, 676542</p></div>
-     
-      
     </div>
   </div>
-  <div class="footer-bottom"><p>© 2026 TBARC. All rights reserved.</p></div>
+  <div class="footer-bottom"><p>© 2026 Tropical Biodiversity Action and Research Centre. All rights reserved.</p></div>
 </footer>
 
+
+<div class="floating-actions" aria-label="Quick actions">
+  <a class="floating-register" href="https://forms.gle/n5pRqGTuPvFTfF8d8"
+     target="_blank" rel="noopener noreferrer" aria-label="Register now">
+    <span class="register-small">Register</span>
+    <span class="register-large">Now</span>
+  </a>
+  <a class="floating-whatsapp"
+     href="https://wa.me/919446833667?text=Hi! I'm interested in registering for the Ecological Niche Modelling Workshop. Could you please share more details about the course?"
+     target="_blank" rel="noopener noreferrer" aria-label="Ask about the course on WhatsApp">
+    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+      <path d="M20.52 3.48A11.82 11.82 0 0 0 12.1 0C5.55 0 .22 5.33.22 11.88c0 2.1.55 4.15 1.6 5.96L.12 24l6.32-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.47-8.42ZM12.1 21.76h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.75.98 1-3.65-.24-.38a9.84 9.84 0 0 1-1.51-5.24c0-5.45 4.44-9.89 9.9-9.89a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.89 7c0 5.45-4.44 9.89-9.89 9.89Zm5.43-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+    </svg>
+  </a>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+</button>
+</div>
+
+
+
 <script>
-/* EDIT EVENTS HERE. Duplicate an event object to add another programme.
-   Set status to "upcoming" before the event and "completed" after it takes place.
-   For completed events, add participantsCount and report. Add reportUrl/galleryUrl only when published.
-   Use a direct image URL or repository path such as ../images/event-poster.jpg.
-   All event details open inside this same page; no additional pages are created.
-*/
-// OPTIONAL COLLABORATION LOGOS FOR THE MAIN HERO SECTION.
-// Leave this array empty [] to show NO logos and no blank space.
-// Add one or more logo objects when a collaboration is taking place.
-// Use a repository path (e.g. "../images/partner-logo.png") or a direct image URL.
-const heroCollaborationLogos = [];
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',()=>{
+  const isOpen=navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded',String(isOpen));
+  menuToggle.setAttribute('aria-label',isOpen?'Close navigation':'Open navigation');
+  menuToggle.textContent=isOpen?'×':'☰';
+});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  navLinks.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+  menuToggle.setAttribute('aria-label','Open navigation');
+  menuToggle.textContent='☰';
+}));
 
-function renderHeroCollaborationLogos(){
-  const container = document.getElementById("heroCollaborationLogos");
-  if(!container) return;
-  container.replaceChildren();
-  const logos = heroCollaborationLogos.filter(logo => logo && typeof logo.src === "string" && logo.src.trim());
-  if(!logos.length){ container.hidden = true; return; }
-  logos.forEach(logo => {
-    const img = document.createElement("img");
-    img.src = logo.src;
-    img.alt = logo.alt || "Collaborating organisation";
-    img.loading = "lazy";
-    img.onerror = function(){ this.remove(); if(!container.children.length) container.hidden = true; };
-    container.appendChild(img);
-  });
-  container.hidden = false;
-}
-
-const events = [
-  {
-    "id": "Ecological-niche-modelling-using-Maxent",
-    "status": "upcoming",
-    "reportUrl": "",
-    "galleryUrl": "",
-    "participantsCount": "",
-    "report": "",
-    "category": "Certificate Course",
-    "title": "Ecological Niche Modelling using Maxent-Second edition",
-    "date": "8-13 December 2026",
-    "time": "09:30 AM – 09:30 PM",
-    "venue": "Hybrid (Online + Hands on Training At KAHM Unity Women's College Manjeri",
-    "participants": "Open to all — students, teachers, nature enthusiasts and community members",
-    "fee": "₹ 3000/-",
-    "image": "../images/lantana.jpg",
-    "summary": "Ecological niche modelling uses species occurrence records and environmental variables to predict suitable habitats, understand species distributions, and forecast potential range shifts under changing environmental conditions.",
-    "about": "This workshop aims to provide participants with a comprehensive understanding of ecological niche modelling and its applications in ecology, biodiversity conservation, and environmental management. It focuses on species occurrence data collection and preparation, selection of relevant environmental predictors, GIS-based spatial analysis, model development using MaxEnt, model validation and performance evaluation, and interpretation of habitat suitability maps. The workshop also introduces participants to the application of ecological niche modelling in predicting potential species distributions, identifying suitable habitats, assessing invasive species spread, understanding the impacts of climate change, and supporting evidence-based conservation planning and decision-making.",
-    "highlights": [
-      {
-        "icon": "leaf",
-        "title": "Expert Talks",
-        "description": "Learn from researchers and conservationists."
-      },
-      {
-        "icon": "users",
-        "title": "Interactive Sessions",
-        "description": "Engage in discussions and activities."
-      },
-      {
-        "icon": "book-open",
-        "title": "Learning Resources",
-        "description": "Get learning materials and practical guidance."
-      }
-    ],
-    "speakers": [
-      {
-        "role": "Keynote Speaker",
-        "name": "Dr. Harshid P",
-        "description": "Conservation Biology",
-        "bio": "Add a short biography about the speaker, including research interests, expertise, and relevant experience.",
-        "topic": "ecological niche modelling",
-        "image": "../images/unais.jpg",
-        "socials": [
-          {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/unaisudheentp/"
-          },
-          {
-            "label": "Instagram",
-            "url": "https://www.instagram.com/_harshiid_/"
-          }
-        ]
-      },
-      {
-        "role": "Lead Speaker",
-        "name": "Unaisudheen TP",
-        "description": "Invasive Plant Researcher",
-        "topic": "Recognising Invasive Plants and Citizen Participation in Biodiversity Monitoring",
-        "image": "../images/unais.jpg",
-        "socials": [
-          {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/unaisudheentp/"
-          },
-          {
-            "label": "Instagram",
-            "url": "https://www.instagram.com/unais.bot/"
-          }
-        ]
-      }
-    ],
-    "audience": [
-      "Students",
-      "Teachers",
-      "Nature Enthusiasts",
-      "Community Members"
-    ],
-    "registrationUrl": "https://forms.gle/7VmUrWrX1f7ueVpG6",
-    "registrationNote": "Registration closes on 5 December 2026. Limited seats available. Confirmation will be sent to your email.",
-    "contact": {
-      "email": "tbarcindia@gmail.com",
-      "phone": "+91 94468 33667",
-      "website": "https://tbarc.in"
-    },
-    "collaborationLogos": [
-      {
-        "src": "../images/logo.png",
-        "alt": "Partner organisation"
-      },
-      {
-        "src": "../images/logo.png",
-        "alt": "Collaborating organisation"
-      }
-    ]
-  }
-];
-
-const $ = id => document.getElementById(id);
-const eventGrid = $("eventGrid"), listingView = $("listingView"), detailView = $("detailView");
-function safeUrl(url){try{const u=new URL(url,window.location.href);return ["http:","https:"].includes(u.protocol)?u.href:""}catch{return ""}}
-function makeText(tag,className,text){const el=document.createElement(tag);if(className)el.className=className;el.textContent=text||"";return el}
-const ICONS={
- leaf:'<path d="M20 4C11 4 5 7 5 14c0 3 2 5 5 5 7 0 10-6 10-15Z" fill="currentColor" stroke="currentColor"/><path d="M3 22c4-6 8-10 14-14"/>',
- users:'<circle cx="12" cy="7" r="3"/><circle cx="5" cy="9" r="2.5"/><circle cx="19" cy="9" r="2.5"/><path d="M6 20v-2c0-3 2-5 6-5s6 2 6 5v2Z"/><path d="M2 19v-2c0-2 1-3.5 3-4M22 19v-2c0-2-1-3.5-3-4"/>',
- book:'<path d="M12 6C9 3 5 3 2 4v15c4-1 7-1 10 2"/><path d="M12 6c3-3 7-3 10-2v15c-4-1-7-1-10 2"/><path d="M12 6v15"/>',
- 'book-open':'<path d="M12 6C9 3 5 3 2 4v15c4-1 7-1 10 2"/><path d="M12 6c3-3 7-3 10-2v15c-4-1-7-1-10 2"/><path d="M12 6v15"/>',
- calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h2M14 14h2M8 17h2"/>',
- clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/>',
- pin:'<path d="M12 22S4 14 4 9a8 8 0 1 1 16 0c0 5-8 13-8 13Z" fill="currentColor"/><circle cx="12" cy="9" r="2.5" fill="#fff" stroke="#fff"/>',
- tag:'<path d="M3 12V4h8l10 10-7 7L3 12Z" fill="currentColor"/><circle cx="8" cy="8" r="1.3" fill="#fff" stroke="#fff"/>',
- mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/>',
- phone:'<path d="M6 2h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 2-2 4-4 4C9 20 4 15 2 6c0-2 2-4 4-4Z" fill="currentColor"/>',
- globe:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6 4 10s-1 7-4 10c-3-3-4-6-4-10s1-7 4-10Z"/>',
- mic:'<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/>',
- 'message-circle':'<path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/>',
- sprout:'<path d="M12 21v-9"/><path d="M12 12C5 12 3 8 3 4c6 0 9 3 9 8Z"/><path d="M12 15c0-6 4-9 9-9 0 5-3 9-9 9Z"/>',
- linkedin:'<path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/>',
- instagram:'<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm5 3a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 2.2a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Zm5.1-3.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>',
- arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
- back:'<path d="M19 12H5M11 18l-6-6 6-6"/>'
+const backToTop=document.getElementById('backToTop');
+const floatingActions=document.querySelector('.floating-actions');
+const updateBackToTop=()=>{
+  const showActions=window.scrollY>300;
+  floatingActions.classList.toggle('visible',showActions);
+  backToTop.classList.toggle('visible',showActions);
 };
-function makeIcon(name,className="ui-icon"){const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 24 24");svg.setAttribute("class",className);svg.setAttribute("aria-hidden","true");svg.innerHTML=ICONS[name]||ICONS.leaf;return svg}
-function iconText(name,text){const span=makeText("span","","");span.style.display="inline-flex";span.style.alignItems="center";span.style.gap="6px";span.append(makeIcon(name),document.createTextNode(text));return span}
-let activeFilter = "all";
-function getEventStatus(event){
-  // An explicitly configured status always wins, so editing other event details
-  // cannot unexpectedly change Upcoming to Completed.
-  if(event.status === "upcoming") return "upcoming";
-  if(event.status === "completed") return "completed";
+window.addEventListener('scroll',updateBackToTop,{passive:true});
+updateBackToTop();
+backToTop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
 
-  // Only infer status from the date when no status has been set on the event.
-  const parsed = Date.parse(event.date || "");
-  if(Number.isFinite(parsed) && parsed < new Date().setHours(0,0,0,0)) return "completed";
-  return "upcoming";
-}
-function setActiveFilter(filter){
-  activeFilter = filter;
-  document.querySelectorAll(".event-filter").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.filter===filter)));
-  renderCards();
-}
-function renderCards(){
-  eventGrid.replaceChildren();
-  events.filter(e=>!e.hidden && (activeFilter === "all" || getEventStatus(e) === activeFilter)).forEach(event=>{
-    const card=document.createElement("button");card.type="button";card.className="event-card";card.setAttribute("aria-label","View details: "+event.title);
-    const imageWrap=makeText("div","event-image-wrap","");
-    const img=document.createElement("img");img.className="event-image";img.src=event.image;img.alt=event.title;img.loading="lazy";img.onerror=function(){this.onerror=null;this.src="https://placehold.co/900x600/e4efe3/075333?text=TBARC+Event"};
-    const cat=makeText("span","event-category",event.category);
-    const status=makeText("span","event-status "+getEventStatus(event),getEventStatus(event)==="completed"?"Completed":"Upcoming");
-    imageWrap.append(img,cat,status);
-    const info=makeText("div","event-info","");info.appendChild(makeText("h3","event-title",event.title));
-    const meta=makeText("div","event-meta","");meta.append(iconText("calendar",event.date),iconText("clock",event.time));
-    info.appendChild(meta);card.append(imageWrap,info);card.addEventListener("click",()=>openEvent(event.id));eventGrid.appendChild(card);
-  });
-  if(!eventGrid.children.length){const msg=activeFilter==="completed"?"No completed events have been added yet.":activeFilter==="upcoming"?"There are no upcoming events to display right now.":"There are no events to display right now.";eventGrid.appendChild(makeText("p","event-empty",msg))}
-}
-document.querySelectorAll(".event-filter").forEach(button=>button.addEventListener("click",()=>setActiveFilter(button.dataset.filter)));
-
-function addFact(icon,label,value){const row=makeText("div","detail-row","");const iconBox=makeText("div","detail-icon","");iconBox.appendChild(makeIcon(icon));row.appendChild(iconBox);const content=makeText("div","","");content.appendChild(makeText("strong","",label));content.appendChild(makeText("p","",value||"To be announced"));row.appendChild(content);return row}
-function addContact(icon,label,value,href){const row=makeText("div","detail-row","");const iconBox=makeText("div","detail-icon","");iconBox.appendChild(makeIcon(icon));row.appendChild(iconBox);const content=makeText("div","","");const p=makeText("p","","");const valid=href&&safeUrl(href);if(valid){const a=document.createElement("a");a.href=valid;a.textContent=value;a.target=href.startsWith("https:")?"_blank":"_self";if(a.target==="_blank")a.rel="noopener noreferrer";p.appendChild(a)}else p.textContent=value;content.appendChild(p);row.appendChild(content);return row}
-function renderEventCollaborationLogos(logos){
-  const container = $("detailCollaborationLogos");
-  if(!container) return;
-  container.replaceChildren();
-  const validLogos = (Array.isArray(logos) ? logos : []).filter(logo => logo && typeof logo.src === "string" && logo.src.trim());
-  if(!validLogos.length){ container.hidden = true; return; }
-  validLogos.forEach(logo => {
-    const img = document.createElement("img");
-    img.src = logo.src;
-    img.alt = logo.alt || "Collaborating organisation";
-    img.loading = "lazy";
-    img.onerror = function(){ this.remove(); if(!container.children.length) container.hidden = true; };
-    container.appendChild(img);
-  });
-  container.hidden = false;
-}
-function openEvent(id){const event=events.find(e=>e.id===id);if(!event)return;const status=getEventStatus(event),isCompleted=status==="completed";const layout=$("detailLayout"),leftContent=document.querySelector(".left-content"),rightContent=$("rightContent"),detailsCard=$("eventDetailsCard"),reportSection=$("reportSection"),completedAboutSection=$("completedAboutSection"),speakersSection=$("speakersSection"),audienceSection=$("audienceSection"),contactCard=$("contactCard");layout.classList.toggle("completed-layout",isCompleted);$("detailStatus").hidden=true;if(isCompleted){leftContent.insertBefore(detailsCard,completedAboutSection);leftContent.insertBefore(completedAboutSection,speakersSection);leftContent.insertBefore(speakersSection,audienceSection);rightContent.insertBefore(reportSection,rightContent.firstChild);completedAboutSection.hidden=true;contactCard.style.display="none";}else{leftContent.insertBefore(reportSection,$("highlightsSection"));leftContent.insertBefore(detailsCard,reportSection);leftContent.insertBefore(speakersSection,audienceSection);completedAboutSection.hidden=true;rightContent.insertBefore(detailsCard,$("registrationCard"));contactCard.style.display="block";}$("detailCategory").textContent=event.category;$("detailTitle").textContent=event.title;$("detailSummary").textContent=event.summary||"";renderEventCollaborationLogos(event.collaborationLogos);$("detailHero").style.backgroundImage=`linear-gradient(90deg,rgba(0,25,10,.88),rgba(0,30,10,.28)),url("${event.image}")`;
- $("detailAboutHeading").textContent=isCompleted?"Programme Report":"About the Event";
- $("detailAbout").textContent=isCompleted?(event.report||"The programme report will be added soon."):(event.about||"Details will be announced soon.");
- $("completedAbout").textContent=event.about||event.summary||"Event details will be added soon.";
- const gallery=$("reportGallery");gallery.replaceChildren();if(status==="completed"&&Array.isArray(event.reportImages)&&event.reportImages.length){event.reportImages.slice(0,3).forEach((photo,index)=>{const figure=makeText("figure","report-photo","");const img=document.createElement("img");img.src=photo.src;img.alt=photo.alt||("Programme photo "+(index+1));img.loading="lazy";img.onerror=function(){this.onerror=null;this.src="https://placehold.co/900x600/e4efe3/075333?text=Programme+Photo"};figure.appendChild(img);figure.appendChild(makeText("figcaption","",photo.caption||("Programme photo "+(index+1))));gallery.appendChild(figure)});gallery.hidden=false}else{gallery.hidden=true}
- $("highlightsSection").style.display=status==="completed"?"none":"block";
- const hi=$("detailHighlights");hi.replaceChildren();(event.highlights||[]).forEach(h=>{const item=makeText("div","highlight","");const iconBox=makeText("div","highlight-icon","");iconBox.appendChild(makeIcon(h.icon||"leaf"));item.appendChild(iconBox);item.appendChild(makeText("strong","",h.title));item.appendChild(makeText("p","",h.description));hi.appendChild(item)});
- const speakers=$("detailSpeakers");speakers.replaceChildren();(event.speakers||[]).forEach(s=>{const article=makeText("article","speaker","");const visual=makeText("div","speaker-visual","");visual.appendChild(makeText("span","speaker-role",s.role||"Speaker"));const wrap=makeText("div","speaker-photo-wrap","");const img=document.createElement("img");img.className="speaker-photo";img.src=s.image||"https://placehold.co/500x600/e4efe3/075333?text=Speaker";img.alt=s.name||"Speaker";img.loading="lazy";img.onerror=function(){this.onerror=null;this.src="https://placehold.co/500x600/e4efe3/075333?text=Speaker"};wrap.appendChild(img);visual.appendChild(wrap);
- const identity=makeText("div","speaker-identity","");identity.appendChild(makeText("strong","speaker-name",s.name||"Speaker name"));identity.appendChild(makeText("p","speaker-description",s.description||""));visual.appendChild(identity);const info=makeText("div","speaker-info speaker-content","");if(s.topic){const topic=makeText("div","speaker-topic","");topic.appendChild(makeText("b","","Talk Topic"));topic.appendChild(document.createTextNode(s.topic));info.appendChild(topic)}if(s.bio){const bio=makeText("p","speaker-bio",s.bio);info.appendChild(bio)}const socials=makeText("div","speaker-socials","");(s.socials||[]).filter(x=>x.url&&safeUrl(x.url)).forEach(x=>{const a=document.createElement("a");a.href=safeUrl(x.url);a.appendChild(makeIcon(String(x.label).toLowerCase()==="linkedin"?"linkedin":String(x.label).toLowerCase()==="instagram"?"instagram":"globe"));a.appendChild(document.createTextNode(x.label));a.target="_blank";a.rel="noopener noreferrer";socials.appendChild(a)});if(socials.children.length)info.appendChild(socials);article.append(visual,info);speakers.appendChild(article)});if(!speakers.children.length)speakers.appendChild(makeText("p","","Speaker details will be announced soon."));
- const audience=$("detailAudience");audience.replaceChildren();(event.audience||[]).forEach(a=>audience.appendChild(makeText("span","",a)));$("audienceSection").style.display=status!=="completed"&&audience.children.length?"block":"none";
- const facts=$("detailFacts");facts.replaceChildren();const participantValue=status==="completed"?(event.participantsCount!==undefined&&String(event.participantsCount).trim()!==""?String(event.participantsCount):"Not recorded"):(event.participants||"To be announced");const participantLabel=status==="completed"?"Number of Participants":"Participants";facts.append(addFact("calendar","Date",event.date),addFact("clock","Time",event.time),addFact("pin","Venue",event.venue),addFact("users",participantLabel,participantValue));if(status!=="completed")facts.appendChild(addFact("tag","Fee",event.fee));
- const register=$("registerButton"),regUrl=safeUrl(event.registrationUrl||""),statusNow=getEventStatus(event);
- const registrationCard=$("registrationCard");
- if(statusNow==="completed"){
-   registrationCard.style.display="none";
-   $("registrationHeading").textContent="This Event Has Concluded";
-   register.style.display="none";
-   $("registerNote").textContent="Thank you for your interest. Explore the event report or photo gallery when available.";
- }else{
-   registrationCard.style.display="block";
-   $("registrationHeading").textContent="Register for the Event";
-   if(regUrl){register.href=regUrl;register.style.display="block";register.target="_blank"}else{register.removeAttribute("href");register.style.display="none"}
-   $("registerNote").textContent=event.registrationNote||"Please contact TBARC for registration information.";
- }
- const contact=$("detailContact");contact.replaceChildren();const c=event.contact||{};if(c.email)contact.appendChild(addContact("mail","Email",c.email,"mailto:"+c.email));if(c.phone)contact.appendChild(addContact("phone","Phone",c.phone,"tel:"+c.phone.replace(/[^+\d]/g,"")));if(c.website)contact.appendChild(addContact("globe","Website",c.website,c.website));
- listingView.classList.add("is-hidden");detailView.classList.add("is-active");document.body.classList.add("detail-open");window.scrollTo({top:0,behavior:"auto"});}
-function showListing(){detailView.classList.remove("is-active");listingView.classList.remove("is-hidden");document.body.classList.remove("detail-open");history.replaceState(null,"",window.location.pathname+window.location.search);window.scrollTo({top:0,behavior:"auto"})}
-$("backButton").addEventListener("click",()=>{window.location.href="../";});history.replaceState(null,"",window.location.pathname+window.location.search);renderHeroCollaborationLogos();renderCards();openEvent(events[0].id);
 </script>
 </body>
 </html>
