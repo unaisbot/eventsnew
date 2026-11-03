@@ -217,20 +217,6 @@
 <div class="event-grid" id="eventGrid"></div></div></main>
 </div>
 
-<div class="detail-view" id="detailView" aria-live="polite">
-  <header class="detail-hero" id="detailHero"><div class="detail-hero-inner"><button type="button" class="back-button" id="backButton"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All Events</button><span class="detail-status" id="detailStatus"></span><div class="detail-hero-heading-row"><div class="detail-hero-copy"><span class="detail-category" id="detailCategory"></span><h1 id="detailTitle"></h1><p id="detailSummary"></p></div><div class="detail-collaboration-logos" id="detailCollaborationLogos" aria-label="Collaborating organisations" hidden></div></div></div></header>
-  <main class="detail-container"><div class="detail-layout" id="detailLayout"><div class="left-content">
-    <div class="card" id="eventDetailsCard"><h3>Event Details</h3><div id="detailFacts"></div></div>
-    <section class="section" id="completedAboutSection" hidden><h2>About the Event</h2><p id="completedAbout"></p></section>
-    <section class="section" id="reportSection"><h2 id="detailAboutHeading">About the Event</h2><p id="detailAbout"></p><div class="report-gallery" id="reportGallery" hidden></div></section>
-    <section class="section" id="highlightsSection"><h2>Event Highlights</h2><div class="highlights" id="detailHighlights"></div></section>
-    <section class="section" id="speakersSection"><h2>Speakers</h2><div class="speakers" id="detailSpeakers"></div></section>
-    <section class="section" id="audienceSection"><h2>Who Can Participate?</h2><div class="audience" id="detailAudience"></div></section>
-  </div><aside class="right-content" id="rightContent">
-    <div class="card register-card" id="registrationCard"><h3 id="registrationHeading">Register for the Event</h3><a class="register-button" id="registerButton" href="#" target="_blank" rel="noopener noreferrer">Register Now <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><p class="register-note" id="registerNote"></p></div>
-    <div class="card" id="contactCard"><h3>Contact</h3><div id="detailContact"></div></div>
-  </aside></div></main>
-</div>
 
 <footer class="footer">
   <div class="footer-inner">
@@ -297,7 +283,290 @@ function renderHeroCollaborationLogos(){
   container.hidden = false;
 }
 
-const events = [{"id":"Practical-Plant-Ecology-and-Vegetation-Analysis","status":"upcoming","reportUrl":"","galleryUrl":"","participantsCount":"","report":"","category":"Certificate course","title":"Practical Plant Ecology and Vegetation Analysis","date":"19 - 21 November 2026","time":"7.30 PM - 9.30 PM","venue":"Online","participants":"MSc. Students, Early career researchers","fee":"₹ 200","image":"images/ecology.jpg","summary":"This workshop introduces plant ecology, vegetation sampling, phytosociology, and GIS applications in ecological research.","about":"The workshop aims to introduce MSc students to the fundamental concepts and methods of plant ecology. It covers vegetation sampling, phytosociological data collection, plant diversity analysis, and GIS applications in ecological research. The programme highlights practical approaches to studying herbs, shrubs, trees, and aquatic plants. It also introduces students to vegetation mapping and biodiversity assessment.","highlights":[{"icon":"mic","title":"Expert Sessions","description":"Add details about the programme sessions."},{"icon":"message-circle","title":"Discussion","description":"Add information about participant interaction."},{"icon":"sprout","title":"Action & Learning","description":"Add the expected learning outcomes."}],"speakers":[{"role":"Keynote Speaker","name":"Dr. Harshid P","description":"Conservation Biology","bio":"Add a short biography about the speaker, including research interests, expertise, and relevant experience.","topic":"ecological niche modelling","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]},{"role":"Keynote Speaker","name":"Dr. Harshid P","description":"Conservation Biology","bio":"Add a short biography about the speaker, including research interests, expertise, and relevant experience.","topic":"ecological niche modelling","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]}],"audience":["M.Sc. Students","Early Career Researchers"],"registrationUrl":"","registrationNote":"Registration information will be announced.","contact":{"email":"tbarcindia@gmail.com","phone":"+91 94468 33667","website":"https://tbarc.in"},"collaborationLogos":[{"src":"","alt":"Partner organisation"},{"src":"","alt":"Collaborating organisation"}]},{"id":"Invasive-species-awareness-workshope","status":"upcoming","reportUrl":"","galleryUrl":"","participantsCount":"","report":"","category":"Workshope","title":"Invasive Species Awareness Workshope","date":"8-13 December 2026","time":"09:30 AM – 09:30 PM","venue":"Online","participants":"Open to all — students, teachers, nature enthusiasts and community members","fee":"Free registration","image":"images/lantana.jpg","summary":"Ecological niche modelling uses species occurrence records and environmental variables to predict suitable habitats, understand species distributions, and forecast potential range shifts under changing environmental conditions.","about":"This workshop aims to provide participants with a comprehensive understanding of ecological niche modelling and its applications in ecology, biodiversity conservation, and environmental management. It focuses on species occurrence data collection and preparation, selection of relevant environmental predictors, GIS-based spatial analysis, model development using MaxEnt, model validation and performance evaluation, and interpretation of habitat suitability maps. The workshop also introduces participants to the application of ecological niche modelling in predicting potential species distributions, identifying suitable habitats, assessing invasive species spread, understanding the impacts of climate change, and supporting evidence-based conservation planning and decision-making.","highlights":[{"icon":"leaf","title":"Expert Talks","description":"Learn from researchers and conservationists."},{"icon":"users","title":"Interactive Sessions","description":"Engage in discussions and activities."},{"icon":"book-open","title":"Learning Resources","description":"Get learning materials and practical guidance."}],"speakers":[{"role":"Keynote Speaker","name":"Dr. Harshid P","description":"Conservation Biology","bio":"Add a short biography about the speaker, including research interests, expertise, and relevant experience.","topic":"ecological niche modelling","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]},{"role":"Lead Speaker","name":"Unaisudheen TP","description":"Invasive Plant Researcher","topic":"Recognising Invasive Plants and Citizen Participation in Biodiversity Monitoring","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/unais.bot/"}]}],"audience":["Students","Teachers","Nature Enthusiasts","Community Members"],"registrationUrl":"https://forms.gle/7VmUrWrX1f7ueVpG6","registrationNote":"Registration closes on 5 December 2026. Limited seats available. Confirmation will be sent to your email.","contact":{"email":"tbarcindia@gmail.com","phone":"+91 94468 33667","website":"https://tbarc.in"},"collaborationLogos":[{"src":"","alt":"Partner organisation"},{"src":"","alt":"Collaborating organisation"}]},{"id":"Ecological-niche-modelling-using-Maxent","status":"upcoming","reportUrl":"","galleryUrl":"","participantsCount":"","report":"","category":"Certificate Course","title":"Ecological Niche Modelling using Maxent-Second edition","date":"8-13 December 2026","time":"09:30 AM – 09:30 PM","venue":"Hybrid (Online + Hands on Training At KAHM Unity Women's College Manjeri","participants":"Open to all — students, teachers, nature enthusiasts and community members","fee":"₹ 3000/-","image":"images/lantana.jpg","summary":"Ecological niche modelling uses species occurrence records and environmental variables to predict suitable habitats, understand species distributions, and forecast potential range shifts under changing environmental conditions.","about":"This workshop aims to provide participants with a comprehensive understanding of ecological niche modelling and its applications in ecology, biodiversity conservation, and environmental management. It focuses on species occurrence data collection and preparation, selection of relevant environmental predictors, GIS-based spatial analysis, model development using MaxEnt, model validation and performance evaluation, and interpretation of habitat suitability maps. The workshop also introduces participants to the application of ecological niche modelling in predicting potential species distributions, identifying suitable habitats, assessing invasive species spread, understanding the impacts of climate change, and supporting evidence-based conservation planning and decision-making.","highlights":[{"icon":"leaf","title":"Expert Talks","description":"Learn from researchers and conservationists."},{"icon":"users","title":"Interactive Sessions","description":"Engage in discussions and activities."},{"icon":"book-open","title":"Learning Resources","description":"Get learning materials and practical guidance."}],"speakers":[{"role":"Keynote Speaker","name":"Dr. Harshid P","description":"Conservation Biology","bio":"Add a short biography about the speaker, including research interests, expertise, and relevant experience.","topic":"ecological niche modelling","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]},{"role":"Lead Speaker","name":"Unaisudheen TP","description":"Invasive Plant Researcher","topic":"Recognising Invasive Plants and Citizen Participation in Biodiversity Monitoring","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/unais.bot/"}]}],"audience":["Students","Teachers","Nature Enthusiasts","Community Members"],"registrationUrl":"https://forms.gle/7VmUrWrX1f7ueVpG6","registrationNote":"Registration closes on 5 December 2026. Limited seats available. Confirmation will be sent to your email.","contact":{"email":"tbarcindia@gmail.com","phone":"+91 94468 33667","website":"https://tbarc.in"},"collaborationLogos":[{"src":"images/logo.png","alt":"Partner organisation"},{"src":"images/logo.png","alt":"Collaborating organisation"}]},{"id":"Social-Media-for-Ecologists:-Careers,-Communication-and-Conservation","status":"upcoming","reportUrl":"","galleryUrl":"","participantsCount":"","report":"","category":"Workshope","title":"Social Media for Ecologists: Careers, Communication and Conservation","date":"8-13 December 2026","time":"09:30 AM – 09:30 PM","venue":"Online","participants":"Open to all — students, teachers, nature enthusiasts and community members","fee":"Free registration","image":"images/lantana.jpg","summary":"Social media provides ecologists with platforms to build professional networks, explore career opportunities, communicate scientific research, and promote biodiversity conservation through digital storytelling, public engagement, and conservation awareness campaigns..","about":"This workshop aims to explore the role of social media in advancing ecological careers, communicating scientific knowledge, and promoting biodiversity conservation. It will introduce participants to the effective use of platforms such as LinkedIn, Instagram, Facebook, and YouTube for professional networking, career development, research visibility, and public engagement. The workshop will cover building a professional digital profile, discovering career and research opportunities, communicating ecological findings to diverse audiences, and creating engaging biodiversity awareness content. Through practical activities and real-world examples, participants will learn how to use digital platforms responsibly to connect with researchers, conservation organisations, and environmental communities while inspiring public participation in biodiversity conservation. The workshop is designed for undergraduate and postgraduate students, research scholars, ecologists, conservation practitioners, and biodiversity enthusiasts interested in strengthening their digital presence and contributing to conservation through effective science communication.","highlights":[{"icon":"leaf","title":"Expert Talks","description":"Learn from researchers and conservationists."},{"icon":"users","title":"Interactive Sessions","description":"Engage in discussions and activities."},{"icon":"book-open","title":"Learning Resources","description":"Get learning materials and practical guidance."}],"speakers":[{"role":"Keynote Speaker","name":"Dr. Harshid P","description":"Conservation Biology","bio":"Add a short biography about the speaker, including research interests, expertise, and relevant experience.","topic":"ecological niche modelling","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]},{"role":"Lead Speaker","name":"Unaisudheen TP","description":"Invasive Plant Researcher","topic":"Recognising Invasive Plants and Citizen Participation in Biodiversity Monitoring","image":"images/unais.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/unaisudheentp/"},{"label":"Instagram","url":"https://www.instagram.com/unais.bot/"}]}],"audience":["Students","Teachers","Nature Enthusiasts","Community Members"],"registrationUrl":"","registrationNote":"Registration closes on 5 December 2026. Limited seats available. Confirmation will be sent to your email.","contact":{"email":"tbarcindia@gmail.com","phone":"+91 94468 33667","website":"https://tbarc.in"},"collaborationLogos":[{"src":"","alt":"Partner organisation"},{"src":"","alt":"Collaborating organisation"}]},{"id":"ecological-niche-modelling","status":"completed","participantsCount":"20","report":"The five-day hybrid certificate course on Ecological Niche Modelling Using MaxEnt was successfully completed at KAHM Unity Women's College, Manjeri, Kerala, from 4 to 9 August 2026. The programme combined online theoretical sessions with offline hands-on training, providing participants with an opportunity to develop knowledge and practical skills in ecological niche modelling and species distribution modelling using MaxEnt. The course covered key aspects of ecological niche modelling, including species occurrence data preparation, environmental and bioclimatic variable selection, spatial data processing, model development, evaluation, and interpretation of species distribution maps. The training highlighted the applications of MaxEnt in biodiversity assessment, invasive species research, habitat suitability analysis, climate change impact assessment, and conservation planning. The programme was designed for undergraduate and postgraduate students, diploma students, researchers, and teaching faculty members from agriculture, forestry, ecology, biodiversity, environmental science, and related disciplines. Through its combination of theoretical instruction and practical training, the course aimed to strengthen participants' technical skills and research capabilities in ecological modelling. The successful completion of the programme represents a valuable contribution to research-oriented learning and capacity building in biodiversity science and conservation. It also encouraged the application of advanced geospatial and modelling techniques to address ecological challenges and support evidence-based environmental management.","reportImages":[{"src":"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80","alt":"Participants working with digital research tools","caption":"Research tools and data analysis — demo image"},{"src":"https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80","alt":"Group discussion during a research programme","caption":"Collaborative learning session — demo image"},{"src":"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80","alt":"Team working together at computers","caption":"Hands-on modelling activity — demo image"}],"category":"Certificate Course","title":"Ecological Niche Modelling Using Maxent-First Edition","date":"4-9 August 2026","time":"9:30 AM - 4.30 PM","venue":"KAHM Unity Women's College Manjeri","participants":"Students and researchers","image":"images/lantana.jpg","summary":"A programme on ecological niche modelling and its applications in ecology and biodiversity research.","about":"A programme on ecological niche modelling and its applications in ecology and biodiversity research.","highlights":[{"icon":"leaf","title":"Ecological Modelling","description":"An introduction to ecological niche modelling."},{"icon":"users","title":"Knowledge Sharing","description":"Discussion and exchange of ideas."},{"icon":"book-open","title":"Research Applications","description":"Explore potential applications in biodiversity research."}],"speakers":[{"role":"Speaker","name":"Dr. harshid P.","description":"Conservation Biology","topic":"Ecological Niche Modelling","image":"images/harshid.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/harshid-pulparambil-phd-074750130/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]}],"audience":["Students","Researchers","Nature Enthusiasts"],"registrationUrl":"","registrationNote":"This programme has been completed.","contact":{"email":"tbarcindia@gmail.com","phone":"+91 94468 33667","website":"https://tbarc.in"},"collaborationLogos":[{"src":"images/logo.png","alt":"Partner organisation"},{"src":"images/unitylogo.png","alt":"Collaborating organisation"}]},{"id":"Bird Watching programme","status":"completed","participantsCount":"47","report":"TBARC organized a bird watching program for beginners and nature enthusiasts on 4 and 5 January 2025. This was one of the activities conducted before TBARC was formally registered as a community. The program was organized in collaboration with the Kerala State Council for Science, Technology and Environment (KSCSTE) as part of its initiatives at M. S. Swaminathan Research Foundation (MSSRF). The program was supported by Dr. Archana Bhatt, Principal Investigator of KSCSTE projects at MSSRF, along with Mr. Sujith M. M. A total of 47 people participated. , 10 officials from MSSRF and TBARC, and three resource persons, Mr. Nishad Eshaal, Mr. Yadu Prasad N., and Mr. Sayyid Rashid. The program began on 4 January at 4.00 p.m. with an informal introduction and interactive activities coordinated by Ms. Angel Abraham.. A campfire session followed, where Mr. Nishad and Mr. Yadu discussed bird behavior, ethical bird watching and field observation practices. Mr. Rashid later conducted a photography session covering camera equipment, camera parts and bird photography techniques. A nocturnal walk was also organized, allowing participants to observe nocturnal animals, amphibians and reptiles. The first day concluded at 9.30  PM. On 5 January, bird watching began at 6.00 a.m. Participants were divided into four groups led by the resource persons and Mr. Abijith Perambra, an experienced bird watcher and photographer. Members of MSSRF and TBARC supported the groups while exploring different parts of the campus and its forested surroundings. The groups later gathered to share their observations. During 4.5 hours of bird watching, 74 bird species were recorded through observations and photographs. For many participants, it was their first bird watching experience, creating enthusiasm and curiosity about birding. The program concluded at 12.00 p.m. with a vote of thanks by Dr. Archana Bhatt. Participants and resource persons appreciated the initiative and encouraged more  programs. ","reportImages":[{"src":"images/bird1.jpg","alt":"Participants working with digital research tools","caption":"The Beginning"},{"src":"images/bird2.jpeg","alt":"Group discussion during a research programme","caption":"Night Session"},{"src":"images/bird3.jpeg","alt":"Team working together at computers","caption":"Team TBARC Bird Community"}],"category":"Natural camp","title":"Bird Watching Programme","date":"4 - 5 January 2025","time":"5:00 PM - 10.30 PM","venue":"MSSRF CAbC Wayanad","participants":"Students, researchers, nature enthusiasts","image":"images/bird1.jpg","summary":"A programme on ecological niche modelling and its applications in ecology and biodiversity research.","about":"A programme on ecological niche modelling and its applications in ecology and biodiversity research.","highlights":[{"icon":"leaf","title":"Ecological Modelling","description":"An introduction to ecological niche modelling."},{"icon":"users","title":"Knowledge Sharing","description":"Discussion and exchange of ideas."},{"icon":"book-open","title":"Research Applications","description":"Explore potential applications in biodiversity research."}],"speakers":[{"role":"Lead","name":"Sayyid Rashid","description":"Wild Life Photographer, Cofounder Recapture Earth","topic":"","image":"images/dummy.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/harshid-pulparambil-phd-074750130/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]},{"role":"Lead","name":"Yadu Prasad","description":"Bird watcher, Kerala Birders Club","topic":"","image":"images/dummy.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/harshid-pulparambil-phd-074750130/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]},{"role":"Lead","name":"Nishad Eshaal","description":"Bird watcher, Kerala Birders Club","topic":"","image":"images/dummy.jpg","socials":[{"label":"LinkedIn","url":"https://www.linkedin.com/in/harshid-pulparambil-phd-074750130/"},{"label":"Instagram","url":"https://www.instagram.com/_harshiid_/"}]}],"audience":["Students","Researchers","Nature Enthusiasts"],"registrationUrl":"","registrationNote":"This programme has been completed.","contact":{"email":"tbarcindia@gmail.com","phone":"+91 94468 33667","website":"https://tbarc.in"},"collaborationLogos":[{"src":"images/logo.png","alt":"Partner organisation"},{"src":"images/unitylogo.png","alt":"Collaborating organisation"}]}];
+const events = [
+  {
+    "id": "ecological-niche-modelling",
+    "status": "completed",
+    "participantsCount": "20",
+    "report": "The five-day hybrid certificate course on Ecological Niche Modelling Using MaxEnt was successfully completed at KAHM Unity Women's College, Manjeri, Kerala, from 4 to 9 August 2026. The programme combined online theoretical sessions with offline hands-on training, providing participants with an opportunity to develop knowledge and practical skills in ecological niche modelling and species distribution modelling using MaxEnt. The course covered key aspects of ecological niche modelling, including species occurrence data preparation, environmental and bioclimatic variable selection, spatial data processing, model development, evaluation, and interpretation of species distribution maps. The training highlighted the applications of MaxEnt in biodiversity assessment, invasive species research, habitat suitability analysis, climate change impact assessment, and conservation planning. The programme was designed for undergraduate and postgraduate students, diploma students, researchers, and teaching faculty members from agriculture, forestry, ecology, biodiversity, environmental science, and related disciplines. Through its combination of theoretical instruction and practical training, the course aimed to strengthen participants' technical skills and research capabilities in ecological modelling. The successful completion of the programme represents a valuable contribution to research-oriented learning and capacity building in biodiversity science and conservation. It also encouraged the application of advanced geospatial and modelling techniques to address ecological challenges and support evidence-based environmental management.",
+    "reportImages": [
+      {
+        "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+        "alt": "Participants working with digital research tools",
+        "caption": "Research tools and data analysis — demo image"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80",
+        "alt": "Group discussion during a research programme",
+        "caption": "Collaborative learning session — demo image"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+        "alt": "Team working together at computers",
+        "caption": "Hands-on modelling activity — demo image"
+      }
+    ],
+    "category": "Certificate Course",
+    "title": "Ecological Niche Modelling Using Maxent-First Edition",
+    "date": "4-9 August 2026",
+    "time": "9:30 AM - 4.30 PM",
+    "venue": "KAHM Unity Women's College Manjeri",
+    "participants": "Students and researchers",
+    "image": "images/lantana.jpg",
+    "summary": "A programme on ecological niche modelling and its applications in ecology and biodiversity research.",
+    "about": "A programme on ecological niche modelling and its applications in ecology and biodiversity research.",
+    "highlights": [
+      {
+        "icon": "leaf",
+        "title": "Ecological Modelling",
+        "description": "An introduction to ecological niche modelling."
+      },
+      {
+        "icon": "users",
+        "title": "Knowledge Sharing",
+        "description": "Discussion and exchange of ideas."
+      },
+      {
+        "icon": "book-open",
+        "title": "Research Applications",
+        "description": "Explore potential applications in biodiversity research."
+      }
+    ],
+    "speakers": [
+      {
+        "role": "Speaker",
+        "name": "Dr. harshid P.",
+        "description": "Conservation Biology",
+        "topic": "Ecological Niche Modelling",
+        "image": "images/harshid.jpg",
+        "socials": [
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/harshid-pulparambil-phd-074750130/"
+          },
+          {
+            "label": "Instagram",
+            "url": "https://www.instagram.com/_harshiid_/"
+          }
+        ]
+      }
+    ],
+    "audience": [
+      "Students",
+      "Researchers",
+      "Nature Enthusiasts"
+    ],
+    "registrationUrl": "",
+    "registrationNote": "This programme has been completed.",
+    "contact": {
+      "email": "tbarcindia@gmail.com",
+      "phone": "+91 94468 33667",
+      "website": "https://tbarc.in"
+    },
+    "collaborationLogos": [
+      {
+        "src": "images/logo.png",
+        "alt": "Partner organisation"
+      },
+      {
+        "src": "images/unitylogo.png",
+        "alt": "Collaborating organisation"
+      }
+    ],
+    "url": "enm-first-edition/"
+  },
+  {
+    "id": "Ecological-niche-modelling-using-Maxent",
+    "status": "upcoming",
+    "reportUrl": "",
+    "galleryUrl": "",
+    "participantsCount": "",
+    "report": "",
+    "category": "Certificate Course",
+    "title": "Ecological Niche Modelling using Maxent-Second edition",
+    "date": "8-13 December 2026",
+    "time": "09:30 AM – 09:30 PM",
+    "venue": "Hybrid (Online + Hands on Training At KAHM Unity Women's College Manjeri",
+    "participants": "Open to all — students, teachers, nature enthusiasts and community members",
+    "fee": "₹ 3000/-",
+    "image": "images/lantana.jpg",
+    "summary": "Ecological niche modelling uses species occurrence records and environmental variables to predict suitable habitats, understand species distributions, and forecast potential range shifts under changing environmental conditions.",
+    "about": "This workshop aims to provide participants with a comprehensive understanding of ecological niche modelling and its applications in ecology, biodiversity conservation, and environmental management. It focuses on species occurrence data collection and preparation, selection of relevant environmental predictors, GIS-based spatial analysis, model development using MaxEnt, model validation and performance evaluation, and interpretation of habitat suitability maps. The workshop also introduces participants to the application of ecological niche modelling in predicting potential species distributions, identifying suitable habitats, assessing invasive species spread, understanding the impacts of climate change, and supporting evidence-based conservation planning and decision-making.",
+    "highlights": [
+      {
+        "icon": "leaf",
+        "title": "Expert Talks",
+        "description": "Learn from researchers and conservationists."
+      },
+      {
+        "icon": "users",
+        "title": "Interactive Sessions",
+        "description": "Engage in discussions and activities."
+      },
+      {
+        "icon": "book-open",
+        "title": "Learning Resources",
+        "description": "Get learning materials and practical guidance."
+      }
+    ],
+    "speakers": [
+      {
+        "role": "Keynote Speaker",
+        "name": "Dr. Harshid P",
+        "description": "Conservation Biology",
+        "bio": "Add a short biography about the speaker, including research interests, expertise, and relevant experience.",
+        "topic": "ecological niche modelling",
+        "image": "images/unais.jpg",
+        "socials": [
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/unaisudheentp/"
+          },
+          {
+            "label": "Instagram",
+            "url": "https://www.instagram.com/_harshiid_/"
+          }
+        ]
+      },
+      {
+        "role": "Lead Speaker",
+        "name": "Unaisudheen TP",
+        "description": "Invasive Plant Researcher",
+        "topic": "Recognising Invasive Plants and Citizen Participation in Biodiversity Monitoring",
+        "image": "images/unais.jpg",
+        "socials": [
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/unaisudheentp/"
+          },
+          {
+            "label": "Instagram",
+            "url": "https://www.instagram.com/unais.bot/"
+          }
+        ]
+      }
+    ],
+    "audience": [
+      "Students",
+      "Teachers",
+      "Nature Enthusiasts",
+      "Community Members"
+    ],
+    "registrationUrl": "https://forms.gle/7VmUrWrX1f7ueVpG6",
+    "registrationNote": "Registration closes on 5 December 2026. Limited seats available. Confirmation will be sent to your email.",
+    "contact": {
+      "email": "tbarcindia@gmail.com",
+      "phone": "+91 94468 33667",
+      "website": "https://tbarc.in"
+    },
+    "collaborationLogos": [
+      {
+        "src": "images/logo.png",
+        "alt": "Partner organisation"
+      },
+      {
+        "src": "images/logo.png",
+        "alt": "Collaborating organisation"
+      }
+    ],
+    "url": "enm-second-edition/"
+  },
+  {
+    "id": "Practical-Plant-Ecology-and-Vegetation-Analysis",
+    "status": "upcoming",
+    "reportUrl": "",
+    "galleryUrl": "",
+    "participantsCount": "",
+    "report": "",
+    "category": "Certificate course",
+    "title": "Practical Plant Ecology and Vegetation Analysis",
+    "date": "19 - 21 November 2026",
+    "time": "7.30 PM - 9.30 PM",
+    "venue": "Online",
+    "participants": "MSc. Students, Early career researchers",
+    "fee": "₹ 200",
+    "image": "images/ecology.jpg",
+    "summary": "This workshop introduces plant ecology, vegetation sampling, phytosociology, and GIS applications in ecological research.",
+    "about": "The workshop aims to introduce MSc students to the fundamental concepts and methods of plant ecology. It covers vegetation sampling, phytosociological data collection, plant diversity analysis, and GIS applications in ecological research. The programme highlights practical approaches to studying herbs, shrubs, trees, and aquatic plants. It also introduces students to vegetation mapping and biodiversity assessment.",
+    "highlights": [
+      {
+        "icon": "mic",
+        "title": "Expert Sessions",
+        "description": "Add details about the programme sessions."
+      },
+      {
+        "icon": "message-circle",
+        "title": "Discussion",
+        "description": "Add information about participant interaction."
+      },
+      {
+        "icon": "sprout",
+        "title": "Action & Learning",
+        "description": "Add the expected learning outcomes."
+      }
+    ],
+    "speakers": [
+      {
+        "role": "Keynote Speaker",
+        "name": "Dr. Harshid P",
+        "description": "Conservation Biology",
+        "bio": "Add a short biography about the speaker, including research interests, expertise, and relevant experience.",
+        "topic": "ecological niche modelling",
+        "image": "images/unais.jpg",
+        "socials": [
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/unaisudheentp/"
+          },
+          {
+            "label": "Instagram",
+            "url": "https://www.instagram.com/_harshiid_/"
+          }
+        ]
+      },
+      {
+        "role": "Keynote Speaker",
+        "name": "Dr. Harshid P",
+        "description": "Conservation Biology",
+        "bio": "Add a short biography about the speaker, including research interests, expertise, and relevant experience.",
+        "topic": "ecological niche modelling",
+        "image": "images/unais.jpg",
+        "socials": [
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/unaisudheentp/"
+          },
+          {
+            "label": "Instagram",
+            "url": "https://www.instagram.com/_harshiid_/"
+          }
+        ]
+      }
+    ],
+    "audience": [
+      "M.Sc. Students",
+      "Early Career Researchers"
+    ],
+    "registrationUrl": "",
+    "registrationNote": "Registration information will be announced.",
+    "contact": {
+      "email": "tbarcindia@gmail.com",
+      "phone": "+91 94468 33667",
+      "website": "https://tbarc.in"
+    },
+    "collaborationLogos": [
+      {
+        "src": "",
+        "alt": "Partner organisation"
+      },
+      {
+        "src": "",
+        "alt": "Collaborating organisation"
+      }
+    ],
+    "url": "bryophytewebinar/"
+  }
+];
 
 const $ = id => document.getElementById(id);
 const eventGrid = $("eventGrid"), listingView = $("listingView"), detailView = $("detailView");
@@ -325,7 +594,6 @@ const ICONS={
 };
 function makeIcon(name,className="ui-icon"){const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 24 24");svg.setAttribute("class",className);svg.setAttribute("aria-hidden","true");svg.innerHTML=ICONS[name]||ICONS.leaf;return svg}
 function iconText(name,text){const span=makeText("span","","");span.style.display="inline-flex";span.style.alignItems="center";span.style.gap="6px";span.append(makeIcon(name),document.createTextNode(text));return span}
-const eventPagePaths = {"Practical-Plant-Ecology-and-Vegetation-Analysis": "events/practical-plant-ecology-and-vegetation-analysis/", "Invasive-species-awareness-workshope": "events/invasive-species-awareness-workshope/", "Ecological-niche-modelling-using-Maxent": "enm-second-edition/", "Social-Media-for-Ecologists:-Careers,-Communication-and-Conservation": "events/social-media-for-ecologists-careers-communication-and-conservation/", "ecological-niche-modelling": "enm-first-edition/", "Bird Watching programme": "bird-watching"};
 let activeFilter = "all";
 function getEventStatus(event){
   // An explicitly configured status always wins, so editing other event details
@@ -345,67 +613,49 @@ function setActiveFilter(filter){
 }
 function renderCards(){
   eventGrid.replaceChildren();
-  events.filter(e=>!e.hidden && (activeFilter === "all" || getEventStatus(e) === activeFilter)).forEach(event=>{
-    const card=document.createElement("button");card.type="button";card.className="event-card";card.setAttribute("aria-label","View details: "+event.title);
-    const imageWrap=makeText("div","event-image-wrap","");
-    const img=document.createElement("img");img.className="event-image";img.src=event.image;img.alt=event.title;img.loading="lazy";img.onerror=function(){this.onerror=null;this.src="https://placehold.co/900x600/e4efe3/075333?text=TBARC+Event"};
-    const cat=makeText("span","event-category",event.category);
-    const status=makeText("span","event-status "+getEventStatus(event),getEventStatus(event)==="completed"?"Completed":"Upcoming");
-    imageWrap.append(img,cat,status);
-    const info=makeText("div","event-info","");info.appendChild(makeText("h3","event-title",event.title));
-    const meta=makeText("div","event-meta","");meta.append(iconText("calendar",event.date),iconText("clock",event.time));
-    info.appendChild(meta);card.append(imageWrap,info);card.addEventListener("click",()=>{ window.location.href = eventPagePaths[event.id] || "#"; });eventGrid.appendChild(card);
-  });
-  if(!eventGrid.children.length){const msg=activeFilter==="completed"?"No completed events have been added yet.":activeFilter==="upcoming"?"There are no upcoming events to display right now.":"There are no events to display right now.";eventGrid.appendChild(makeText("p","event-empty",msg))}
-}
-document.querySelectorAll(".event-filter").forEach(button=>button.addEventListener("click",()=>setActiveFilter(button.dataset.filter)));
-
-function addFact(icon,label,value){const row=makeText("div","detail-row","");const iconBox=makeText("div","detail-icon","");iconBox.appendChild(makeIcon(icon));row.appendChild(iconBox);const content=makeText("div","","");content.appendChild(makeText("strong","",label));content.appendChild(makeText("p","",value||"To be announced"));row.appendChild(content);return row}
-function addContact(icon,label,value,href){const row=makeText("div","detail-row","");const iconBox=makeText("div","detail-icon","");iconBox.appendChild(makeIcon(icon));row.appendChild(iconBox);const content=makeText("div","","");const p=makeText("p","","");const valid=href&&safeUrl(href);if(valid){const a=document.createElement("a");a.href=valid;a.textContent=value;a.target=href.startsWith("https:")?"_blank":"_self";if(a.target==="_blank")a.rel="noopener noreferrer";p.appendChild(a)}else p.textContent=value;content.appendChild(p);row.appendChild(content);return row}
-function renderEventCollaborationLogos(logos){
-  const container = $("detailCollaborationLogos");
-  if(!container) return;
-  container.replaceChildren();
-  const validLogos = (Array.isArray(logos) ? logos : []).filter(logo => logo && typeof logo.src === "string" && logo.src.trim());
-  if(!validLogos.length){ container.hidden = true; return; }
-  validLogos.forEach(logo => {
+  events
+    .filter(e => activeFilter === "all" || getEventStatus(e) === activeFilter)
+    .sort((a, b) => {
+      // On the All Events view, show upcoming programmes first and
+      // completed programmes at the end. Keep original order within each group.
+      if (activeFilter !== "all") return 0;
+      const order = { upcoming: 0, completed: 1 };
+      return order[getEventStatus(a)] - order[getEventStatus(b)];
+    })
+    .forEach(event => {
+    const card = document.createElement("a");
+    card.className = "event-card";
+    card.href = event.url;
+    card.setAttribute("aria-label", "View details: " + event.title);
+    card.style.textDecoration = "none";
+    const imageWrap = makeText("div","event-image-wrap","");
     const img = document.createElement("img");
-    img.src = logo.src;
-    img.alt = logo.alt || "Collaborating organisation";
+    img.className = "event-image";
+    img.src = event.image;
+    img.alt = event.title;
     img.loading = "lazy";
-    img.onerror = function(){ this.remove(); if(!container.children.length) container.hidden = true; };
-    container.appendChild(img);
+    img.onerror = function(){this.onerror=null;this.src="https://placehold.co/900x600/e4efe3/075333?text=TBARC+Event"};
+    const cat = makeText("span","event-category",event.category);
+    const status = makeText("span","event-status "+getEventStatus(event),getEventStatus(event)==="completed"?"Completed":"Upcoming");
+    imageWrap.append(img,cat,status);
+    const info = makeText("div","event-info","");
+    info.appendChild(makeText("h3","event-title",event.title));
+    const meta = makeText("div","event-meta","");
+    meta.append(iconText("calendar",event.date),iconText("clock",event.time));
+    info.appendChild(meta);
+    card.append(imageWrap,info);
+    eventGrid.appendChild(card);
   });
-  container.hidden = false;
+  if(!eventGrid.children.length){
+    const msg = activeFilter==="completed"?"No completed events have been added yet.":activeFilter==="upcoming"?"There are no upcoming events to display right now.":"There are no events to display right now.";
+    eventGrid.appendChild(makeText("p","event-empty",msg));
+  }
 }
-function openEvent(id){const event=events.find(e=>e.id===id);if(!event)return;history.replaceState(null,"", "#"+encodeURIComponent(event.id));const status=getEventStatus(event),isCompleted=status==="completed";const layout=$("detailLayout"),leftContent=document.querySelector(".left-content"),rightContent=$("rightContent"),detailsCard=$("eventDetailsCard"),reportSection=$("reportSection"),completedAboutSection=$("completedAboutSection"),speakersSection=$("speakersSection"),audienceSection=$("audienceSection"),contactCard=$("contactCard");layout.classList.toggle("completed-layout",isCompleted);$("detailStatus").hidden=true;if(isCompleted){leftContent.insertBefore(detailsCard,completedAboutSection);leftContent.insertBefore(completedAboutSection,speakersSection);leftContent.insertBefore(speakersSection,audienceSection);rightContent.insertBefore(reportSection,rightContent.firstChild);completedAboutSection.hidden=true;contactCard.style.display="none";}else{leftContent.insertBefore(reportSection,$("highlightsSection"));leftContent.insertBefore(detailsCard,reportSection);leftContent.insertBefore(speakersSection,audienceSection);completedAboutSection.hidden=true;rightContent.insertBefore(detailsCard,$("registrationCard"));contactCard.style.display="block";}$("detailCategory").textContent=event.category;$("detailTitle").textContent=event.title;$("detailSummary").textContent=event.summary||"";renderEventCollaborationLogos(event.collaborationLogos);$("detailHero").style.backgroundImage=`linear-gradient(90deg,rgba(0,25,10,.88),rgba(0,30,10,.28)),url("${event.image}")`;
- $("detailAboutHeading").textContent=isCompleted?"Programme Report":"About the Event";
- $("detailAbout").textContent=isCompleted?(event.report||"The programme report will be added soon."):(event.about||"Details will be announced soon.");
- $("completedAbout").textContent=event.about||event.summary||"Event details will be added soon.";
- const gallery=$("reportGallery");gallery.replaceChildren();if(status==="completed"&&Array.isArray(event.reportImages)&&event.reportImages.length){event.reportImages.slice(0,3).forEach((photo,index)=>{const figure=makeText("figure","report-photo","");const img=document.createElement("img");img.src=photo.src;img.alt=photo.alt||("Programme photo "+(index+1));img.loading="lazy";img.onerror=function(){this.onerror=null;this.src="https://placehold.co/900x600/e4efe3/075333?text=Programme+Photo"};figure.appendChild(img);figure.appendChild(makeText("figcaption","",photo.caption||("Programme photo "+(index+1))));gallery.appendChild(figure)});gallery.hidden=false}else{gallery.hidden=true}
- $("highlightsSection").style.display=status==="completed"?"none":"block";
- const hi=$("detailHighlights");hi.replaceChildren();(event.highlights||[]).forEach(h=>{const item=makeText("div","highlight","");const iconBox=makeText("div","highlight-icon","");iconBox.appendChild(makeIcon(h.icon||"leaf"));item.appendChild(iconBox);item.appendChild(makeText("strong","",h.title));item.appendChild(makeText("p","",h.description));hi.appendChild(item)});
- const speakers=$("detailSpeakers");speakers.replaceChildren();(event.speakers||[]).forEach(s=>{const article=makeText("article","speaker","");const visual=makeText("div","speaker-visual","");visual.appendChild(makeText("span","speaker-role",s.role||"Speaker"));const wrap=makeText("div","speaker-photo-wrap","");const img=document.createElement("img");img.className="speaker-photo";img.src=s.image||"https://placehold.co/500x600/e4efe3/075333?text=Speaker";img.alt=s.name||"Speaker";img.loading="lazy";img.onerror=function(){this.onerror=null;this.src="https://placehold.co/500x600/e4efe3/075333?text=Speaker"};wrap.appendChild(img);visual.appendChild(wrap);
- const identity=makeText("div","speaker-identity","");identity.appendChild(makeText("strong","speaker-name",s.name||"Speaker name"));identity.appendChild(makeText("p","speaker-description",s.description||""));visual.appendChild(identity);const info=makeText("div","speaker-info speaker-content","");if(s.topic){const topic=makeText("div","speaker-topic","");topic.appendChild(makeText("b","","Talk Topic"));topic.appendChild(document.createTextNode(s.topic));info.appendChild(topic)}if(s.bio){const bio=makeText("p","speaker-bio",s.bio);info.appendChild(bio)}const socials=makeText("div","speaker-socials","");(s.socials||[]).filter(x=>x.url&&safeUrl(x.url)).forEach(x=>{const a=document.createElement("a");a.href=safeUrl(x.url);a.appendChild(makeIcon(String(x.label).toLowerCase()==="linkedin"?"linkedin":String(x.label).toLowerCase()==="instagram"?"instagram":"globe"));a.appendChild(document.createTextNode(x.label));a.target="_blank";a.rel="noopener noreferrer";socials.appendChild(a)});if(socials.children.length)info.appendChild(socials);article.append(visual,info);speakers.appendChild(article)});if(!speakers.children.length)speakers.appendChild(makeText("p","","Speaker details will be announced soon."));
- const audience=$("detailAudience");audience.replaceChildren();(event.audience||[]).forEach(a=>audience.appendChild(makeText("span","",a)));$("audienceSection").style.display=status!=="completed"&&audience.children.length?"block":"none";
- const facts=$("detailFacts");facts.replaceChildren();const participantValue=status==="completed"?(event.participantsCount!==undefined&&String(event.participantsCount).trim()!==""?String(event.participantsCount):"Not recorded"):(event.participants||"To be announced");const participantLabel=status==="completed"?"Number of Participants":"Participants";facts.append(addFact("calendar","Date",event.date),addFact("clock","Time",event.time),addFact("pin","Venue",event.venue),addFact("users",participantLabel,participantValue));if(status!=="completed")facts.appendChild(addFact("tag","Fee",event.fee));
- const register=$("registerButton"),regUrl=safeUrl(event.registrationUrl||""),statusNow=getEventStatus(event);
- const registrationCard=$("registrationCard");
- if(statusNow==="completed"){
-   registrationCard.style.display="none";
-   $("registrationHeading").textContent="This Event Has Concluded";
-   register.style.display="none";
-   $("registerNote").textContent="Thank you for your interest. Explore the event report or photo gallery when available.";
- }else{
-   registrationCard.style.display="block";
-   $("registrationHeading").textContent="Register for the Event";
-   if(regUrl){register.href=regUrl;register.style.display="block";register.target="_blank"}else{register.removeAttribute("href");register.style.display="none"}
-   $("registerNote").textContent=event.registrationNote||"Please contact TBARC for registration information.";
- }
- const contact=$("detailContact");contact.replaceChildren();const c=event.contact||{};if(c.email)contact.appendChild(addContact("mail","Email",c.email,"mailto:"+c.email));if(c.phone)contact.appendChild(addContact("phone","Phone",c.phone,"tel:"+c.phone.replace(/[^+\d]/g,"")));if(c.website)contact.appendChild(addContact("globe","Website",c.website,c.website));
- listingView.classList.add("is-hidden");detailView.classList.add("is-active");document.body.classList.add("detail-open");window.scrollTo({top:0,behavior:"auto"});}
-function showListing(){detailView.classList.remove("is-active");listingView.classList.remove("is-hidden");document.body.classList.remove("detail-open");history.replaceState(null,"",window.location.pathname+window.location.search);window.scrollTo({top:0,behavior:"auto"})}
-$("backButton").addEventListener("click",showListing);window.addEventListener("popstate",()=>{const id=decodeURIComponent(location.hash.slice(1));if(id&&events.some(e=>e.id===id))openEvent(id);else showListing()});renderHeroCollaborationLogos();renderCards();
+document.querySelectorAll(".event-filter").forEach(button =>
+  button.addEventListener("click",()=>setActiveFilter(button.dataset.filter))
+);
+renderHeroCollaborationLogos();
+renderCards();
 </script>
 </body>
 </html>
