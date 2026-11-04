@@ -315,6 +315,54 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
   .floating-actions .back-to-top{width:52px;height:52px;flex-basis:52px}
 }
 
+
+/* Event location and fee details */
+.location-fee-section{padding:76px 0}
+.location-panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;align-items:stretch}
+.location-info,.map-frame-wrap,.fee-card{border:1px solid var(--border);border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 10px 28px rgba(4,59,37,.06)}
+.location-info{padding:30px}
+.location-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:var(--light);color:var(--green);margin-bottom:18px}
+.location-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.location-info h3{margin:0 0 10px;color:var(--dark);font-size:21px;line-height:1.35}
+.location-info p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}
+.location-detail{display:flex;gap:11px;align-items:flex-start;margin-top:20px;padding-top:17px;border-top:1px solid var(--border);color:#405246;font-size:12px;line-height:1.7}
+.location-detail strong{display:block;color:var(--dark);font-size:11px;margin-bottom:2px}
+.location-detail .pin{color:var(--green);font-size:17px;line-height:1.3}
+.map-frame-wrap{min-height:330px;background:#edf3ed}
+.map-frame-wrap iframe{display:block;width:100%;height:100%;min-height:330px;border:0}
+.map-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.map-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:8px;background:var(--green);color:#fff;text-decoration:none;font-size:12px;font-weight:800;transition:.2s}
+.map-link:hover{background:var(--dark);transform:translateY(-2px)}
+.map-link.secondary{background:#edf4ec;color:var(--green);border:1px solid #dce9dc}
+.fee-wrap{max-width:900px;margin:0 auto}
+.fee-card{display:grid;grid-template-columns:.8fr 1.2fr;overflow:hidden}
+.fee-price{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:34px;background:linear-gradient(145deg,#043b25,#087047);color:#fff}
+.fee-price .fee-label{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#d6e9d8}
+.fee-price strong{font-family:"Manrope",sans-serif;font-size:clamp(36px,5vw,48px);line-height:1.15;margin:10px 0 7px;letter-spacing:-1.5px}
+.fee-price span:last-child{font-size:12px;color:#e0eee2}
+.fee-inclusions{padding:31px 34px}
+.fee-inclusions h3{margin:0 0 18px;color:var(--dark);font-size:19px}
+.fee-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin:0;padding:0;list-style:none}
+.fee-list li{display:flex;align-items:flex-start;gap:10px;color:#4d5b50;font-size:13px;line-height:1.55}
+.fee-list li:before{content:"✓";flex:0 0 21px;width:21px;height:21px;display:grid;place-items:center;border-radius:50%;background:#eaf3e9;color:var(--green);font-size:11px;font-weight:900}
+.fee-note{margin:20px 0 0;padding-top:15px;border-top:1px solid var(--border);color:var(--muted);font-size:11px;line-height:1.7}
+@media(max-width:760px){
+ .location-fee-section{padding:57px 0}
+ .location-panel{grid-template-columns:1fr;gap:16px}
+ .location-info{padding:23px}
+ .map-frame-wrap,.map-frame-wrap iframe{min-height:280px}
+ .fee-card{grid-template-columns:1fr}
+ .fee-price{padding:27px}
+ .fee-inclusions{padding:25px 23px}
+ .fee-list{grid-template-columns:1fr;gap:12px}
+}
+
+
+/* Refined venue text hierarchy */
+.venue-department{margin:0 0 9px!important;color:var(--green)!important;font-size:12px!important;font-weight:800;letter-spacing:.2px}
+.location-info h3{margin-bottom:9px}
+.location-info .venue-address{color:var(--muted);font-size:13px;line-height:1.8}
+
 </style>
 </head>
 <body>
@@ -326,6 +374,8 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
       <a href="#about-event">About</a>
       <a href="#overview">Course Overview</a>
       <a href="#syllabus">Syllabus</a>
+      <a href="#location">Location</a>
+      <a href="#fee-details">Fee Details</a>
       <a class="nav-cta" href="https://forms.gle/n5pRqGTuPvFTfF8d8">Registration ↗</a>
     </nav>
   </div>
@@ -529,6 +579,65 @@ h1,h2,h3,h4,.fact-value,.nav-links a,.btn,.hero-kicker,.eyebrow,.section-heading
           </ul></div>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section location-fee-section" id="location">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Venue & directions</p>
+      <h2>Event Location</h2>
+      <p>The in-person practical sessions will be held at the following venue.</p>
+    </div>
+    <div class="location-panel">
+      <article class="location-info">
+        <div class="location-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </div>
+        <p class="venue-department">Postgraduate and Research Department of Botany</p>
+        <h3>KAHM Unity Women's College (Autonomous)</h3>
+        <p class="venue-address">Manjeri, Malappuram District, Kerala, India</p>
+      </article>
+      <div class="map-frame-wrap">
+        <iframe
+          title="Map showing KAHM Unity Women's College, Manjeri"
+          src="https://www.google.com/maps?q=KAHM%20Unity%20Women%27s%20College%2C%20Manjeri%2C%20Kerala&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft location-fee-section" id="fee-details">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Registration & inclusions</p>
+      <h2>Course Fee Details</h2>
+      <p>One registration fee covering the course and the listed participant facilities.</p>
+    </div>
+    <div class="fee-wrap">
+      <div class="fee-card">
+        <div class="fee-price">
+          <span class="fee-label">Registration fee</span>
+          <strong>₹3,500</strong>
+          <span>Per participant</span>
+        </div>
+        <div class="fee-inclusions">
+          <h3>What's Included</h3>
+          <ul class="fee-list">
+            <li>Food</li>
+            <li>Accommodation</li>
+            <li>Registration kit</li>
+            <li>Study materials</li>
+          </ul>
+          <p class="fee-note">The registration fee includes the facilities and materials listed above for the course participants.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
