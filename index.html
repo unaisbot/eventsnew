@@ -1,666 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<meta name="description" content="Discover workshops, seminars, webinars, nature camps and biodiversity events organised by TBARC India.">
-<title>Events | TBARC India</title>
-<link rel="icon" type="image/png" href="images/favicon.png">
-<style>
-:root{--green:#075333;--dark:#043b25;--light:#f0f6ef;--pale:#e4efe3;--text:#202923;--muted:#626a63;--border:#e4ebe4;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.65}
-a{color:inherit}
-.site-header{background:#fff;border-bottom:1px solid var(--border)}
-.nav-container{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;text-decoration:none}
-.brand-logo{display:block;width:135px;height:30px;object-fit:contain;object-position:left center}
-.get-involved-btn{display:inline-block;padding:10px 20px;background:#176b45;color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:6px;white-space:nowrap}
-.get-involved-btn:hover{background:#104d32}
-.hero{background:linear-gradient(90deg,rgba(2,36,20,.92),rgba(4,64,35,.68)),url('images/hero.jpg') center 45%/cover;color:#fff;padding:78px 24px 82px}
-.hero-inner{max-width:1120px;margin:auto}
-.hero-label{display:inline-block;background:#ffffff20;border:1px solid #ffffff55;padding:6px 13px;border-radius:30px;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:18px}
-.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.12;letter-spacing:-1px;max-width:760px;margin:0 0 16px}
-.hero p{font-size:16px;color:#e2eee4;max-width:650px;margin:0}
-.events-section{padding:64px 24px 80px;background:#f7faf6;min-height:400px}
-.container{max-width:1120px;margin:auto}
-.event-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 auto 28px}
-.event-filter{appearance:none;border:1px solid #d7e4d8;background:#fff;color:#245a3b;padding:10px 18px;border-radius:30px;font:700 13px Arial,Helvetica,sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.event-filter:hover,.event-filter[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
-.event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.event-card{display:block;width:100%;padding:0;text-align:left;font:inherit;color:inherit;background:#fff;border:1px solid var(--border);border-radius:15px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.event-card:hover,.event-card:focus-visible{transform:translateY(-4px);box-shadow:0 13px 30px #0753331c;outline:2px solid #75a98a;outline-offset:2px}
-.event-image-wrap{height:225px;position:relative;background:var(--pale);overflow:hidden}
-.event-image{width:100%;height:100%;display:block;object-fit:cover;transition:transform .3s}
-.event-card:hover .event-image{transform:scale(1.035)}
-.event-category{position:absolute;top:14px;left:14px;background:#075333ed;color:#fff;padding:6px 12px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:.3px}
-.event-status{position:absolute;top:14px;right:14px;padding:6px 10px;border-radius:30px;font-size:10px;font-weight:800;letter-spacing:.3px;text-transform:uppercase;box-shadow:0 2px 8px #0002}
-.event-status.upcoming{background:#fff;color:#075333}
-.event-status.completed{background:#e6e9e6;color:#414a42}
-.event-info{padding:20px 20px 22px}
-.event-title{color:var(--dark);font-size:19px;line-height:1.4;margin:0 0 13px}
-.event-meta{display:flex;flex-wrap:wrap;gap:8px 15px;color:var(--muted);font-size:12px}
-.event-meta span{display:flex;align-items:center;gap:6px}
-.ui-icon{display:inline-block;width:16px;height:16px;flex:0 0 auto;stroke:var(--green);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
-.event-empty{grid-column:1/-1;text-align:center;padding:35px;color:var(--muted)}
-.footer{background:#bfd6c5;border-top:1px solid var(--border);padding:38px 24px 20px;text-align:left}
-.footer-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.35fr .8fr 1fr;gap:44px}
-.footer-brand-row{display:flex;align-items:center;gap:15px;margin-bottom:15px}
-.footer-logo{display:block;width:76px;height:76px;object-fit:contain;flex:0 0 auto}
-.footer-brand{font-size:16px;font-weight:800;line-height:1.45;color:#202923;margin:0;max-width:260px}
-.footer-socials{display:flex;align-items:center;gap:15px;margin-top:12px}
-.footer-socials a{display:inline-flex;align-items:center;justify-content:center;color:#000;text-decoration:none;width:23px;height:23px}
-.footer-socials svg{width:21px;height:21px;fill:currentColor}
-.footer-heading{font-size:15px;font-weight:800;color:#202923;margin:0 0 14px}
-.footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
-.footer-links a,.footer-contact a{font-size:13px;color:#202923;text-decoration:none}
-.footer-links a:hover,.footer-contact a:hover{text-decoration:underline}
-.footer-contact-row{display:flex;align-items:flex-start;gap:10px;margin:0 0 13px;font-size:13px;color:#202923}
-.footer-contact-row svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
-.footer-contact-row p{font-size:13px;color:#202923;margin:0}
-.footer-bottom{max-width:1120px;margin:28px auto 0;padding-top:15px;border-top:1px solid #9db9a5;text-align:center}
-.footer-bottom p{font-size:12px;color:#37483b;margin:0}
-.footer a{color:inherit}
-@media(max-width:900px){.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.hero{padding:60px 20px 65px}.hero p{font-size:14px}.events-section{padding:48px 17px 58px}.event-grid{gap:13px}.event-image-wrap{height:175px}.event-info{padding:15px 13px 17px}.event-title{font-size:15px}.event-meta{font-size:11px;gap:7px 10px}.event-filters{gap:7px;margin-bottom:22px}.event-filter{padding:9px 13px;font-size:12px}.event-status{top:8px;right:8px;padding:5px 7px;font-size:9px}.footer{padding:30px 20px 18px}.footer-inner{grid-template-columns:1fr;gap:28px}.footer-brand-row{align-items:center}.footer-logo{width:66px;height:66px}.footer-brand{font-size:15px}.footer-bottom{margin-top:25px}}
-@media(max-width:420px){.nav-container{padding:10px 12px}.get-involved-btn{padding:8px 11px;font-size:12px}.brand-logo{width:135px;height:30px}.event-grid{grid-template-columns:minmax(0,1fr);gap:16px}.event-image-wrap{height:210px}.event-category{top:10px;left:10px;padding:6px 10px;font-size:10px}.event-info{padding:16px 15px 18px}.event-title{font-size:17px}.event-meta{gap:7px 12px;font-size:12px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore upcoming and completed events organised by TBARC India.">
+  <title>Events | TBARC India</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <style>
+    :root {
+      --green: #075333;
+      --dark: #043b25;
+      --muted: #626a63;
+      --border: #e4ebe4;
+      --page: #f7faf6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #202923;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .site-header { border-bottom: 1px solid var(--border); }
+    .nav {
+      max-width: 1120px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-logo { width: 135px; height: 30px; object-fit: contain; object-position: left; }
+    .involved {
+      padding: 10px 18px;
+      border-radius: 6px;
+      background: #176b45;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .hero {
+      padding: 70px 24px;
+      color: white;
+      background: linear-gradient(90deg, rgba(2,36,20,.92), rgba(4,64,35,.68)),
+                  url("images/hero.jpg") center 45% / cover;
+    }
+    .hero-inner, .container { max-width: 1120px; margin: auto; }
+    .hero-label {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 5px 12px;
+      border: 1px solid #ffffff66;
+      border-radius: 30px;
+      background: #ffffff20;
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .hero h1 { margin: 0 0 12px; font-size: clamp(34px, 5vw, 54px); line-height: 1.15; }
+    .hero p { max-width: 650px; margin: 0; color: #e2eee4; }
+    .events-section { min-height: 350px; padding: 48px 24px 70px; background: var(--page); }
+    .filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px; margin-bottom: 28px; }
+    .filter {
+      padding: 9px 17px;
+      border: 1px solid #d7e4d8;
+      border-radius: 30px;
+      background: white;
+      color: #245a3b;
+      font: 700 13px Arial, sans-serif;
+      cursor: pointer;
+    }
+    .filter[aria-pressed="true"], .filter:hover { background: var(--green); color: white; border-color: var(--green); }
+    .event-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .event-card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: white;
+      color: inherit;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .event-card:hover, .event-card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px #0753331c;
+      outline: 2px solid #75a98a;
+      outline-offset: 2px;
+    }
+    .image-wrap { position: relative; height: 220px; overflow: hidden; background: #e4efe3; }
+    .event-image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+    .event-card:hover .event-image { transform: scale(1.035); }
+    .category, .status {
+      position: absolute;
+      top: 13px;
+      padding: 6px 11px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .category { left: 13px; color: white; background: #075333ed; }
+    .status { right: 13px; text-transform: uppercase; }
+    .status.upcoming { color: #075333; background: white; }
+    .status.completed { color: #414a42; background: #e6e9e6; }
+    .event-info { padding: 18px 19px 20px; }
+    .event-title { margin: 0 0 12px; color: var(--dark); font-size: 18px; line-height: 1.4; }
+    .event-meta { display: flex; flex-wrap: wrap; gap: 7px 15px; color: var(--muted); font-size: 12px; }
+    .event-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .event-meta svg { width: 15px; height: 15px; fill: none; stroke: var(--green); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .empty { grid-column: 1 / -1; padding: 30px; color: var(--muted); text-align: center; }
+    .footer { padding: 36px 24px 18px; background: #bfd6c5; }
+    .footer-inner {
+      max-width: 1120px; margin: auto;
+      display: grid; grid-template-columns: 1.35fr .8fr 1fr; gap: 40px;
+    }
+    .footer-brand-row { display: flex; align-items: center; gap: 15px; margin-bottom: 14px; }
+    .footer-logo { width: 70px; height: 70px; object-fit: contain; }
+    .footer-brand { max-width: 260px; font-size: 15px; font-weight: 800; line-height: 1.4; }
+    .footer-heading { margin: 0 0 12px; font-size: 15px; }
+    .footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
+    .footer-links a, .footer-contact a { color: #202923; font-size: 13px; text-decoration: none; }
+    .footer-links a:hover, .footer-contact a:hover { text-decoration: underline; }
+    .socials { display: flex; gap: 14px; margin-top: 12px; }
+    .socials a { color: #000; font-size: 13px; font-weight: 700; text-decoration: none; }
+    .footer-contact p { margin: 0 0 10px; font-size: 13px; }
+    .footer-bottom { max-width: 1120px; margin: 25px auto 0; padding-top: 14px; border-top: 1px solid #9db9a5; text-align: center; }
+    .footer-bottom p { margin: 0; color: #37483b; font-size: 12px; }
+    @media (max-width: 900px) { .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) {
+      .hero { padding: 55px 20px; }
+      .events-section { padding: 38px 16px 52px; }
+      .event-grid { gap: 14px; }
+      .image-wrap { height: 175px; }
+      .event-info { padding: 14px; }
+      .event-title { font-size: 15px; }
+      .event-meta { font-size: 11px; gap: 7px 10px; }
+      .footer { padding: 28px 20px 18px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 25px; }
+    }
+    @media (max-width: 420px) {
+      .nav { padding: 10px 12px; }
+      .involved { padding: 8px 11px; font-size: 12px; }
+      .event-grid { grid-template-columns: 1fr; gap: 16px; }
+      .image-wrap { height: 210px; }
+      .event-title { font-size: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header"><div class="nav-container"><a class="brand" href="https://tbarc.in" aria-label="TBARC India home"><img src="images/logo.png" alt="TBARC Logo" class="brand-logo"></a><a href="https://forms.gle/cvtcP5pCJYYg6xUD7" class="get-involved-btn" target="_blank" rel="noopener noreferrer">Get Involved</a></div></header>
-<section class="hero"><div class="hero-inner"><span class="hero-label">TBARC India · Events</span><h1>Explore Our Events</h1><p>Discover workshops, seminars, webinars, nature camps and other programmes bringing people together for biodiversity, research and conservation.</p></div></section>
-<main class="events-section"><div class="container"><div class="event-filters" id="eventFilters" role="group" aria-label="Filter events">
-  <button type="button" class="event-filter" data-filter="all" aria-pressed="true">All Events</button>
-  <button type="button" class="event-filter" data-filter="upcoming" aria-pressed="false">Upcoming</button>
-  <button type="button" class="event-filter" data-filter="completed" aria-pressed="false">Completed</button>
-</div><div class="event-grid" id="eventGrid" aria-live="polite"></div></div></main>
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand-column">
-      <div class="footer-brand-row">
-        <a href="https://tbarc.in" aria-label="TBARC India home"><img src="images/logo.png" alt="TBARC logo" class="footer-logo"></a>
-        <div class="footer-brand">Tropical Biodiversity Action and Research Centre</div>
+  <header class="site-header">
+    <div class="nav">
+      <a href="https://tbarc.in" aria-label="TBARC India home">
+        <img src="images/logo.png" alt="TBARC Logo" class="brand-logo">
+      </a>
+      <a href="https://forms.gle/cvtcP5pCJYYg6xUD7" class="involved" target="_blank" rel="noopener noreferrer">Get Involved</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-label">TBARC India · Events</span>
+      <h1>Explore Our Events</h1>
+      <p>Discover workshops, webinars, certificate courses and other programmes organised by TBARC India.</p>
+    </div>
+  </section>
+
+  <main class="events-section">
+    <div class="container">
+      <div class="filters" role="group" aria-label="Filter events">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All Events</button>
+        <button class="filter" type="button" data-filter="upcoming" aria-pressed="false">Upcoming</button>
+        <button class="filter" type="button" data-filter="completed" aria-pressed="false">Completed</button>
       </div>
-      <div class="footer-socials" aria-label="Social media links">
-        <a href="https://www.facebook.com/tbarcindia" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H6.8v3.2h2.9V21z"/></svg></a>
-        <a href="https://www.instagram.com/tbarcindia" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.9a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 2.2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.1-3.7a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg></a>
-        <a href="https://www.linkedin.com/company/tbarcindia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a>
-        <a href="https://www.youtube.com/@tbarcindia" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+      <div class="event-grid" id="eventGrid" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-row">
+          <a href="https://tbarc.in"><img src="images/logo.png" alt="TBARC logo" class="footer-logo"></a>
+          <div class="footer-brand">Tropical Biodiversity Action and Research Centre</div>
+        </div>
+        <div class="socials" aria-label="Social media links">
+          <a href="https://www.facebook.com/tbarcindia" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/tbarcindia" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/tbarcindia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.youtube.com/@tbarcindia" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="footer-heading">Quick Links</h2>
+        <nav class="footer-links" aria-label="Footer quick links">
+          <a href="https://tbarc.in/">Home</a>
+          <a href="https://tbarc.in/blog">Blog</a>
+          <a href="https://tbarc.in/gallery">Gallery</a>
+          <a href="https://tbarc.in/downloads">Downloads</a>
+          <a href="https://tbarc.in/videos">Videos</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h2 class="footer-heading">Contact Us</h2>
+        <p><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></p>
+        <p>Appolo, Mampad College P.O.,<br>Nilambur, Keralam, 676542</p>
       </div>
     </div>
-    <div class="footer-quick-links">
-      <h3 class="footer-heading">Quick Links</h3>
-      <nav class="footer-links" aria-label="Footer quick links">
-        <a href="https://tbarc.in/">Home</a>
-        <a href="https://tbarc.in/blog">Blog</a>
-        <a href="https://tbarc.in/gallery">Gallery</a>
-        <a href="https://tbarc.in/downloads">Downloads</a>
-        <a href="https://tbarc.in/videos">Videos</a>
-      </nav>
-    </div>
-    <div class="footer-contact">
-      <h3 class="footer-heading">Contact Us</h3>
-      <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:tbarcindia@gmail.com">tbarcindia@gmail.com</a></div>
-      <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><p>Appolo, Mampad College P.O.,</br> Nilambur, Keralam, 676542</p></div>
-     
-      
-    </div>
-  </div>
-  <div class="footer-bottom"><p>© 2026 TBARC. All rights reserved.</p></div>
-</footer>
-<script>
-/*
-  EVENT DATA
-  All original event information has been retained below. The listing page
-  currently displays only the fields needed for event cards. Additional fields
-  are preserved so they remain available for future event-page features.
-  To hide an event without deleting its information, add: "hidden": true
-*/
-const events = [
-  {
-    "id": "Ecological-niche-modelling-using-Maxent",
-    "status": "upcoming",
-    "reportUrl": "",
-    "galleryUrl": "",
-    "participantsCount": "",
-    "report": "",
-    "category": "Certificate Course",
-    "title": "Ecological Niche Modelling using Maxent-Second edition",
-    "date": "8-13 December 2026",
-    "time": "09:30 AM – 09:30 PM",
-    "venue": "Hybrid (Online + Hands on Training At KAHM Unity Women's College Manjeri",
-    "participants": "Open to all — students, teachers, nature enthusiasts and community members",
-    "fee": "₹ 3000/-",
-    "image": "images/heroenm.jpg",
-    "summary": "Ecological niche modelling uses species occurrence records and environmental variables to predict suitable habitats, understand species distributions, and forecast potential range shifts under changing environmental conditions.",
-    "about": "This workshop aims to provide participants with a comprehensive understanding of ecological niche modelling and its applications in ecology, biodiversity conservation, and environmental management. It focuses on species occurrence data collection and preparation, selection of relevant environmental predictors, GIS-based spatial analysis, model development using MaxEnt, model validation and performance evaluation, and interpretation of habitat suitability maps. The workshop also introduces participants to the application of ecological niche modelling in predicting potential species distributions, identifying suitable habitats, assessing invasive species spread, understanding the impacts of climate change, and supporting evidence-based conservation planning and decision-making.",
-    "highlights": [
+    <div class="footer-bottom"><p>© 2026 TBARC. All rights reserved.</p></div>
+  </footer>
+
+  <script>
+    // Keep event details here limited to the information shown on this listing page.
+    // Set hidden: true to retain an event's data without displaying its card.
+    const events = [
       {
-        "icon": "leaf",
-        "title": "Expert Talks",
-        "description": "Learn from researchers and conservationists."
+        status: "upcoming",
+        category: "Certificate Course",
+        title: "Ecological Niche Modelling using Maxent-Second edition",
+        date: "8–13 December 2026",
+        time: "09:30 AM – 09:30 PM",
+        image: "images/heroenm.jpg",
+        url: "enm-second-edition/"
       },
       {
-        "icon": "users",
-        "title": "Interactive Sessions",
-        "description": "Engage in discussions and activities."
+        status: "upcoming",
+        hidden: true,
+        category: "Webinar",
+        title: "Exploring Kerala’s Hornworts: Taxonomy, Distribution",
+        date: "19–21 November 2026",
+        time: "7.30 PM – 9.30 PM",
+        image: "images/ecology.jpg",
+        url: "bryophyte-webinar/"
       },
       {
-        "icon": "book-open",
-        "title": "Learning Resources",
-        "description": "Get learning materials and practical guidance."
+        status: "completed",
+        category: "Certificate Course",
+        title: "Ecological Niche Modelling Using Maxent-First Edition",
+        date: "4–9 August 2026",
+        time: "9:30 AM – 4:30 PM",
+        image: "images/lantana.jpg",
+        url: "enm-first-edition/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "Green Invaders: The Silent Threat to Biodiversity",
+        date: "22 April 2026",
+        time: "7.30 PM",
+        image: "images/clim.jpg",
+        url: "cnc-webinar/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "Harnessing AI for a Resilient Earth",
+        date: "07 February 2026",
+        time: "7.30 PM",
+        image: "images/clim.jpg",
+        url: "ai-webinar/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "COMPLEXITY OF CARE: ECOLOGY, SOCIETY, AND COMMUNITY MENTAL HEALTH PARADIGM.",
+        date: "10 October 2025",
+        time: "7.30 PM",
+        image: "images/clim.jpg",
+        url: "mental-health-webinar/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "അറിഞ്ഞിരിക്കേണ്ട ചില *ആന* ക്കാര്യങ്ങൾ.",
+        date: "17 August 2025",
+        time: "7.30 PM",
+        image: "images/clim.jpg",
+        url: "elepahant-day-webinar/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "The Un-noticed Commoner.",
+        date: "18 July 2025",
+        time: "7.30 PM",
+        image: "images/clim.jpg",
+        url: "moth-week-webinar/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "Buzz for the Planet: Meet the Pollinating Heroes.",
+        date: "May 30 2025",
+        time: "7.30 PM",
+        image: "images/clim.jpg",
+        url: "bee-day-webinar/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Invited Talk",
+        title: "Breaking free from plastic and preserving our tropical paradise",
+        date: "May 30 2025",
+        time: "10.30 AM",
+        image: "images/clim.jpg",
+        url: "envi-day/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Invited Talk",
+        title: "Green your office : A sustainable future together",
+        date: "07 December 2024",
+        time: "1.45 PM",
+        image: "images/clim.jpg",
+        url: "green-your-office/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "Emotional concerns related to climate change",
+        date: "06 December 2024",
+        time: "7 PM",
+        image: "images/clim.jpg",
+        url: "climate-change-webinar/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Nature Camp",
+        title: "City Nature Challenge 2025 — a global celebration of biodiversity",
+        date: "27–28 April 2024",
+        time: "9.30 AM",
+        image: "images/clim.jpg",
+        url: "cnc-2025/"
+      },
+      {
+        status: "completed",
+        hidden: true,
+        category: "Webinar",
+        title: "A Journey from Coal to Stars in Quest for Sustainable Power.",
+        date: "22 April 2024",
+        time: "7.30 PM",
+        image: "images/clim.jpg",
+        url: "earth-day-webinar/"
       }
-    ],
-    "speakers": [
-      {
-        "role": "Keynote Speaker",
-        "name": "Dr. Harshid P",
-        "description": "Conservation Biology",
-        "bio": "Add a short biography about the speaker, including research interests, expertise, and relevant experience.",
-        "topic": "ecological niche modelling",
-        "image": "images/unais.jpg",
-        "socials": [
-          {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/unaisudheentp/"
-          },
-          {
-            "label": "Instagram",
-            "url": "https://www.instagram.com/_harshiid_/"
-          }
-        ]
-      },
-      {
-        "role": "Lead Speaker",
-        "name": "Unaisudheen TP",
-        "description": "Invasive Plant Researcher",
-        "topic": "Recognising Invasive Plants and Citizen Participation in Biodiversity Monitoring",
-        "image": "images/unais.jpg",
-        "socials": [
-          {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/unaisudheentp/"
-          },
-          {
-            "label": "Instagram",
-            "url": "https://www.instagram.com/unais.bot/"
-          }
-        ]
+    ];
+
+    const grid = document.getElementById("eventGrid");
+    let activeFilter = "all";
+
+    const icons = {
+      calendar: '<rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path>',
+      clock: '<circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l4 2"></path>'
+    };
+
+    function metaItem(iconName, value) {
+      const item = document.createElement("span");
+      const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      icon.setAttribute("viewBox", "0 0 24 24");
+      icon.setAttribute("aria-hidden", "true");
+      icon.innerHTML = icons[iconName];
+      item.append(icon, document.createTextNode(value));
+      return item;
+    }
+
+    function createCard(event) {
+      const card = document.createElement("a");
+      card.className = "event-card";
+      card.href = event.url;
+      card.setAttribute("aria-label", "View event: " + event.title);
+
+      const imageWrap = document.createElement("div");
+      imageWrap.className = "image-wrap";
+
+      const image = document.createElement("img");
+      image.className = "event-image";
+      image.src = event.image;
+      image.alt = event.title;
+      image.loading = "lazy";
+      image.onerror = function () {
+        this.onerror = null;
+        this.src = "https://placehold.co/900x600/e4efe3/075333?text=TBARC+Event";
+      };
+
+      const category = document.createElement("span");
+      category.className = "category";
+      category.textContent = event.category;
+
+      const status = document.createElement("span");
+      status.className = "status " + event.status;
+      status.textContent = event.status === "upcoming" ? "Upcoming" : "Completed";
+
+      imageWrap.append(image, category, status);
+
+      const info = document.createElement("div");
+      info.className = "event-info";
+
+      const title = document.createElement("h3");
+      title.className = "event-title";
+      title.textContent = event.title;
+
+      const meta = document.createElement("div");
+      meta.className = "event-meta";
+      meta.append(metaItem("calendar", event.date), metaItem("clock", event.time));
+
+      info.append(title, meta);
+      card.append(imageWrap, info);
+      return card;
+    }
+
+    function renderEvents() {
+      grid.replaceChildren();
+
+      const visibleEvents = events
+        .filter(event => !event.hidden)
+        .filter(event => activeFilter === "all" || event.status === activeFilter)
+        .sort((a, b) => {
+          if (activeFilter !== "all") return 0;
+          return (a.status === "upcoming" ? 0 : 1) - (b.status === "upcoming" ? 0 : 1);
+        });
+
+      visibleEvents.forEach(event => grid.appendChild(createCard(event)));
+
+      if (!visibleEvents.length) {
+        const message = document.createElement("p");
+        message.className = "empty";
+        message.textContent = "No events to display.";
+        grid.appendChild(message);
       }
-    ],
-    "audience": [
-      "Students",
-      "Teachers",
-      "Nature Enthusiasts",
-      "Community Members"
-    ],
-    "registrationUrl": "https://forms.gle/7VmUrWrX1f7ueVpG6",
-    "registrationNote": "Registration closes on 5 December 2026. Limited seats available. Confirmation will be sent to your email.",
-    "contact": {
-      "email": "tbarcindia@gmail.com",
-      "phone": "+91 94468 33667",
-      "website": "https://tbarc.in"
-    },
-    "collaborationLogos": [
-      {
-        "src": "images/logo.png",
-        "alt": "Partner organisation"
-      },
-      {
-        "src": "images/logo.png",
-        "alt": "Collaborating organisation"
-      }
-    ],
-    "url": "enm-second-edition/"
-  },
-  {
-    "id": "Exploring Kerala’s Hornworts: Taxonomy, Distribution",
-    "status": "upcoming",
-    "hidden": true,
-    "reportUrl": "",
-    "galleryUrl": "",
-    "participantsCount": "",
-    "report": "",
-    "category": "Webinar",
-    "title": "Exploring Kerala’s Hornworts: Taxonomy, Distribution",
-    "date": "19 - 21 November 2026",
-    "time": "7.30 PM - 9.30 PM",
-    "venue": "Online",
-    "participants": "MSc. Students, Early career researchers",
-    "fee": "₹ 200",
-    "image": "images/ecology.jpg",
-    "summary": "This workshop introduces plant ecology, vegetation sampling, phytosociology, and GIS applications in ecological research.",
-    "about": "The workshop aims to introduce MSc students to the fundamental concepts and methods of plant ecology. It covers vegetation sampling, phytosociological data collection, plant diversity analysis, and GIS applications in ecological research. The programme highlights practical approaches to studying herbs, shrubs, trees, and aquatic plants. It also introduces students to vegetation mapping and biodiversity assessment.",
-    "highlights": [
-      {
-        "icon": "mic",
-        "title": "Expert Sessions",
-        "description": "Add details about the programme sessions."
-      },
-      {
-        "icon": "message-circle",
-        "title": "Discussion",
-        "description": "Add information about participant interaction."
-      },
-      {
-        "icon": "sprout",
-        "title": "Action & Learning",
-        "description": "Add the expected learning outcomes."
-      }
-    ],
-    "speakers": [
-      {
-        "role": "Keynote Speaker",
-        "name": "Dr. Harshid P",
-        "description": "Conservation Biology",
-        "bio": "Add a short biography about the speaker, including research interests, expertise, and relevant experience.",
-        "topic": "ecological niche modelling",
-        "image": "images/unais.jpg",
-        "socials": [
-          {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/unaisudheentp/"
-          },
-          {
-            "label": "Instagram",
-            "url": "https://www.instagram.com/_harshiid_/"
-          }
-        ]
-      },
-      {
-        "role": "Keynote Speaker",
-        "name": "Dr. Harshid P",
-        "description": "Conservation Biology",
-        "bio": "Add a short biography about the speaker, including research interests, expertise, and relevant experience.",
-        "topic": "ecological niche modelling",
-        "image": "images/unais.jpg",
-        "socials": [
-          {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/unaisudheentp/"
-          },
-          {
-            "label": "Instagram",
-            "url": "https://www.instagram.com/_harshiid_/"
-          }
-        ]
-      }
-    ],
-    "audience": [
-      "M.Sc. Students",
-      "Early Career Researchers"
-    ],
-    "registrationUrl": "",
-    "registrationNote": "Registration information will be announced.",
-    "contact": {
-      "email": "tbarcindia@gmail.com",
-      "phone": "+91 94468 33667",
-      "website": "https://tbarc.in"
-    },
-    "collaborationLogos": [
-      {
-        "src": "",
-        "alt": "Partner organisation"
-      },
-      {
-        "src": "",
-        "alt": "Collaborating organisation"
-      }
-    ],
-    "url": "bryophyte-webinar/"
-  },
-  {
-    "id": "ecological-niche-modelling",
-    "status": "completed",
-    "participantsCount": "20",
-    "report": "The five-day hybrid certificate course on Ecological Niche Modelling Using MaxEnt was successfully completed at KAHM Unity Women's College, Manjeri, Kerala, from 4 to 9 August 2026. The programme combined online theoretical sessions with offline hands-on training, providing participants with an opportunity to develop knowledge and practical skills in ecological niche modelling and species distribution modelling using MaxEnt. The course covered key aspects of ecological niche modelling, including species occurrence data preparation, environmental and bioclimatic variable selection, spatial data processing, model development, evaluation, and interpretation of species distribution maps. The training highlighted the applications of MaxEnt in biodiversity assessment, invasive species research, habitat suitability analysis, climate change impact assessment, and conservation planning. The programme was designed for undergraduate and postgraduate students, diploma students, researchers, and teaching faculty members from agriculture, forestry, ecology, biodiversity, environmental science, and related disciplines. Through its combination of theoretical instruction and practical training, the course aimed to strengthen participants' technical skills and research capabilities in ecological modelling. The successful completion of the programme represents a valuable contribution to research-oriented learning and capacity building in biodiversity science and conservation. It also encouraged the application of advanced geospatial and modelling techniques to address ecological challenges and support evidence-based environmental management.",
-    "reportImages": [
-      {
-        "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
-        "alt": "Participants working with digital research tools",
-        "caption": "Research tools and data analysis — demo image"
-      },
-      {
-        "src": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80",
-        "alt": "Group discussion during a research programme",
-        "caption": "Collaborative learning session — demo image"
-      },
-      {
-        "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
-        "alt": "Team working together at computers",
-        "caption": "Hands-on modelling activity — demo image"
-      }
-    ],
-    "category": "Certificate Course",
-    "title": "Ecological Niche Modelling Using Maxent-First Edition",
-    "date": "4-9 August 2026",
-    "time": "9:30 AM - 4.30 PM",
-    "venue": "KAHM Unity Women's College Manjeri",
-    "participants": "Students and researchers",
-    "image": "images/lantana.jpg",
-    "summary": "A programme on ecological niche modelling and its applications in ecology and biodiversity research.",
-    "about": "A programme on ecological niche modelling and its applications in ecology and biodiversity research.",
-    "highlights": [
-      {
-        "icon": "leaf",
-        "title": "Ecological Modelling",
-        "description": "An introduction to ecological niche modelling."
-      },
-      {
-        "icon": "users",
-        "title": "Knowledge Sharing",
-        "description": "Discussion and exchange of ideas."
-      },
-      {
-        "icon": "book-open",
-        "title": "Research Applications",
-        "description": "Explore potential applications in biodiversity research."
-      }
-    ],
-    "speakers": [
-      {
-        "role": "Speaker",
-        "name": "Dr. harshid P.",
-        "description": "Conservation Biology",
-        "topic": "Ecological Niche Modelling",
-        "image": "images/harshid.jpg",
-        "socials": [
-          {
-            "label": "LinkedIn",
-            "url": "https://www.linkedin.com/in/harshid-pulparambil-phd-074750130/"
-          },
-          {
-            "label": "Instagram",
-            "url": "https://www.instagram.com/_harshiid_/"
-          }
-        ]
-      }
-    ],
-    "audience": [
-      "Students",
-      "Researchers",
-      "Nature Enthusiasts"
-    ],
-    "registrationUrl": "",
-    "registrationNote": "This programme has been completed.",
-    "contact": {
-      "email": "tbarcindia@gmail.com",
-      "phone": "+91 94468 33667",
-      "website": "https://tbarc.in"
-    },
-    "collaborationLogos": [
-      {
-        "src": "images/logo.png",
-        "alt": "Partner organisation"
-      },
-      {
-        "src": "images/unitylogo.png",
-        "alt": "Collaborating organisation"
-      }
-    ],
-    "url": "enm-first-edition/"
-  },
-  {
-    "id": "green-invaders",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "Green Invaders: The Silent Threat to Biodiversity",
-    "date": "22 April 2026",
-    "time": "7.30 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "Programme report supplied with the event details.",
-    "url": "cnc-webinar/"
-  },
-  {
-    "id": "harnessing-ai-resilient-earth",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "Harnessing AI for a Resilient Earth",
-    "date": "07 February 2026",
-    "time": "7.30 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "Programme report supplied with the event details.",
-    "url": "ai-webinar/"
-  },
-  {
-    "id": "complexity-of-care",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "COMPLEXITY OF CARE: ECOLOGY, SOCIETY, AND COMMUNITY MENTAL HEALTH PARADIGM.",
-    "date": "10 October 2025",
-    "time": "7.30 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "Programme report supplied with the event details.",
-    "url": "mental-health-webinar/"
-  },
-  {
-    "id": "elephant-webinar",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "അറിഞ്ഞിരിക്കേണ്ട ചില *ആന* ക്കാര്യങ്ങൾ.",
-    "date": "17 August 2025",
-    "time": "7.30 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "Programme report supplied with the event details.",
-    "url": "elepahant-day-webinar/"
-  },
-  {
-    "id": "the-un-noticed-commoner",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "The Un-noticed Commoner.",
-    "date": "18 July 2025",
-    "time": "7.30 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "Programme report supplied with the event details.",
-    "url": "moth-week-webinar/"
-  },
-  {
-    "id": "buzz-for-the-planet",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "Buzz for the Planet: Meet the Pollinating Heroes.",
-    "date": "May 30 2025",
-    "time": "7.30 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "A webinar on pollinators, pollination, threats to pollinator diversity and conservation.",
-    "url": "bee-day-webinar/"
-  },
-  {
-    "id": "breaking-free-from-plastic",
-    "hidden": true,
-    "status": "completed",
-    "category": "Invited Talk",
-    "title": "Breaking free from plastic and preserving our tropical paradise",
-    "date": "May 30 2025",
-    "time": "10.30 am",
-    "venue": "St Mary’s College, Sulthan Bathery\nSir Syed College, Taliparamba\nAnsar English Secondary School, Valavannur",
-    "image": "images/clim.jpg",
-    "summary": "A series of invited talks on plastic pollution, waste, sustainable living and reducing carbon footprints.",
-    "url": "envi-day/"
-  },
-  {
-    "id": "green-your-office",
-    "hidden": true,
-    "status": "completed",
-    "category": "Invited Talk",
-    "title": "Green your office : A sustainable future together",
-    "date": "07 December 2024",
-    "time": "1.45 pm",
-    "venue": "The visa Guy, HiLITE Business Park, Kozhikode",
-    "image": "images/clim.jpg",
-    "summary": "An invited session on practical workplace choices and sustainable habits.",
-    "url": "green-your-office/"
-  },
-  {
-    "id": "emotional-concerns-climate-change",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "Emotional concerns related to climate change",
-    "date": "06 December 2024",
-    "time": "7 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "A Malayalam webinar exploring the emotional impacts of climate change and the importance of emotional resilience in climate action.",
-    "url": "climate-change-webinar/"
-  },
-  {
-    "id": "city-nature-challenge-2025",
-    "hidden": true,
-    "status": "completed",
-    "category": "Nature camp",
-    "title": "City Nature Challenge 2025 — a global celebration of biodiversity",
-    "date": "27,28 April 2024",
-    "time": "9.30 am",
-    "venue": "MSSRF CAbC Wayanad, Chaliyar river Nilambur",
-    "image": "images/clim.jpg",
-    "summary": "A citizen-science Bioblitz introducing participants to biodiversity documentation and the iNaturalist app.",
-    "url": "cnc-2025/"
-  },
-  {
-    "id": "journey-coal-to-stars",
-    "hidden": true,
-    "status": "completed",
-    "category": "Webinar",
-    "title": "A Journey from Coal to Stars in Quest for Sustainable Power.",
-    "date": "22 April 2024",
-    "time": "7.30 pm",
-    "venue": "Google meet",
-    "image": "images/clim.jpg",
-    "summary": "An Earth Day webinar exploring energy use, pollution, green energy and pathways towards sustainable power.",
-    "url": "earth-day-webinar/"
-  }
-];
+    }
 
-const eventGrid = document.getElementById("eventGrid");
-let activeFilter = "all";
-
-const icons = {
-  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>',
-  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/>'
-};
-
-function createIcon(name) {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("viewBox", "0 0 24 24");
-  svg.setAttribute("class", "ui-icon");
-  svg.setAttribute("aria-hidden", "true");
-  svg.innerHTML = icons[name];
-  return svg;
-}
-
-function createMetaItem(iconName, value) {
-  const item = document.createElement("span");
-  item.append(createIcon(iconName), document.createTextNode(value || ""));
-  return item;
-}
-
-function getEventStatus(event) {
-  // Explicit status takes priority. Date fallback is used only if status is omitted.
-  if (event.status === "upcoming" || event.status === "completed") return event.status;
-  const date = Date.parse(event.date || "");
-  return Number.isFinite(date) && date < new Date().setHours(0, 0, 0, 0)
-    ? "completed"
-    : "upcoming";
-}
-
-function createEventCard(event) {
-  const statusValue = getEventStatus(event);
-  const card = document.createElement("a");
-  card.className = "event-card";
-  card.href = event.url || "#";
-  card.setAttribute("aria-label", "View details: " + (event.title || "Event"));
-  card.style.textDecoration = "none";
-
-  const imageWrap = document.createElement("div");
-  imageWrap.className = "event-image-wrap";
-
-  const image = document.createElement("img");
-  image.className = "event-image";
-  image.src = event.image || "";
-  image.alt = event.title || "TBARC event";
-  image.loading = "lazy";
-  image.onerror = function () {
-    this.onerror = null;
-    this.src = "https://placehold.co/900x600/e4efe3/075333?text=TBARC+Event";
-  };
-
-  const category = document.createElement("span");
-  category.className = "event-category";
-  category.textContent = event.category || "Programme";
-
-  const status = document.createElement("span");
-  status.className = "event-status " + statusValue;
-  status.textContent = statusValue === "completed" ? "Completed" : "Upcoming";
-
-  imageWrap.append(image, category, status);
-
-  const info = document.createElement("div");
-  info.className = "event-info";
-  const title = document.createElement("h3");
-  title.className = "event-title";
-  title.textContent = event.title || "Untitled event";
-  const meta = document.createElement("div");
-  meta.className = "event-meta";
-  meta.append(createMetaItem("calendar", event.date), createMetaItem("clock", event.time));
-  info.append(title, meta);
-  card.append(imageWrap, info);
-  return card;
-}
-
-function renderCards() {
-  eventGrid.replaceChildren();
-
-  const visibleEvents = events
-    .filter(event => !event.hidden)
-    .filter(event => activeFilter === "all" || getEventStatus(event) === activeFilter)
-    .sort((a, b) => {
-      if (activeFilter !== "all") return 0;
-      const order = { upcoming: 0, completed: 1 };
-      return order[getEventStatus(a)] - order[getEventStatus(b)];
+    document.querySelectorAll(".filter").forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        document.querySelectorAll(".filter").forEach(item => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        renderEvents();
+      });
     });
 
-  visibleEvents.forEach(event => eventGrid.appendChild(createEventCard(event)));
-
-  if (visibleEvents.length === 0) {
-    const message = document.createElement("p");
-    message.className = "event-empty";
-    message.textContent = activeFilter === "completed"
-      ? "No completed events have been added yet."
-      : activeFilter === "upcoming"
-        ? "There are no upcoming events to display right now."
-        : "There are no events to display right now.";
-    eventGrid.appendChild(message);
-  }
-}
-
-document.querySelectorAll(".event-filter").forEach(button => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter;
-    document.querySelectorAll(".event-filter").forEach(filterButton => {
-      filterButton.setAttribute("aria-pressed", String(filterButton === button));
-    });
-    renderCards();
-  });
-});
-
-renderCards();
-</script>
+    renderEvents();
+  </script>
 </body>
 </html>
