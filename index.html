@@ -75,23 +75,46 @@
       cursor: pointer;
     }
     .filter[aria-pressed="true"], .filter:hover { background: var(--green); color: white; border-color: var(--green); }
-    .event-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .event-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
     .event-card {
-      display: block;
+      display: flex;
+      flex-direction: column;
       overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: white;
+      border: 1px solid #dce7dd;
+      border-radius: 16px;
+      background: #fff;
       color: inherit;
       text-decoration: none;
-      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 5px 18px rgba(24, 65, 39, .09);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
     }
     .event-card:hover, .event-card:focus-visible {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px #0753331c;
+      transform: translateY(-5px);
+      border-color: #a9c8b1;
+      box-shadow: 0 14px 30px rgba(24, 65, 39, .16);
       outline: 2px solid #75a98a;
       outline-offset: 2px;
     }
+    .registration-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 18px;
+      padding: 11px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      transition: background .2s, color .2s;
+    }
+    .registration-action.open { color: #fff; background: #087447; }
+    .registration-action.closed { color: #59635c; background: #edf0ee; border: 1px solid #dce2dd; }
+    .registration-action.soon { color: #765000; background: #fff3d6; border: 1px solid #f0dfb4; }
+    .event-card:hover .registration-action.open { background: #055c37; }
+    .event-info { display: flex; flex: 1; flex-direction: column; }
+    .event-meta { margin-top: auto; }
     .image-wrap { position: relative; height: 220px; overflow: hidden; background: #e4efe3; }
     .event-image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
     .event-card:hover .event-image { transform: scale(1.035); }
@@ -230,6 +253,7 @@
     const events = [
       {
         status: "upcoming",
+        registrationStatus: "open", // Options: "open", "closed", "soon".
         category: "Certificate Course",
         title: "Ecological Niche Modelling using Maxent-Second edition",
         date: "8–13 December 2026",
@@ -240,6 +264,7 @@
       {
         status: "upcoming",
         hidden: true,
+        registrationStatus: "soon",
         category: "Webinar",
         title: "Exploring Kerala’s Hornworts: Taxonomy, Distribution",
         date: "19–21 November 2026",
@@ -427,6 +452,22 @@
       meta.append(metaItem("calendar", event.date), metaItem("clock", event.time));
 
       info.append(title, meta);
+
+      // The bottom action reflects registration availability. The whole card
+      // remains linked to the programme page, so the action is a visual CTA.
+      const action = document.createElement("span");
+      action.className = "registration-action";
+      let registrationValue = event.status === "completed" ? "closed" : (event.registrationStatus || "closed");
+      const actionLabels = {
+        open: "Register Now",
+        closed: "Registration Closed",
+        soon: "Registration Starts Soon"
+      };
+      if (!Object.prototype.hasOwnProperty.call(actionLabels, registrationValue)) registrationValue = "closed";
+      action.classList.add(registrationValue);
+      action.textContent = actionLabels[registrationValue];
+
+      info.append(action);
       card.append(imageWrap, info);
       return card;
     }
