@@ -833,7 +833,20 @@ h1,h2,h3{font-family:'Manrope',sans-serif!important}
  .site-header .nav-cta,.site-header .get-involved-btn,.site-header .involved{font-size:10px!important;padding:7px 9px!important}
 }
 
-</style><style>.tbarc-page-hero{background-image:url('images/hero.jpg')}
+</style><style>
+/* Hero image fix: load from the site-root images folder and keep the overlay above it */
+html body .tbarc-page-hero {
+  background-color: #173d32 !important;
+  background-image:
+    linear-gradient(90deg, rgba(5,32,17,.88) 0%, rgba(5,32,17,.68) 58%, rgba(5,32,17,.35) 100%),
+    url('/images/hero.jpg') !important;
+  background-position: center 48% !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+html body .tbarc-page-hero::before {
+  display: none !important;
+}
 </style></head>
 <body>
 <header class="site-header"><div class="container nav-wrap"><a aria-label="TBARC home" class="brand" href="https://tbarc.in/"><img alt="TBARC logo" src="images/logo.png"/><span class="brand-name">Tropical <span>Biodiversity</span><br/>Action &amp; Research Center</span></a><nav aria-label="Main navigation" class="nav-links" id="primary-navigation"><a href="https://tbarc.in/">Home</a><a aria-current="page" class="active" href="https://events.tbarc.in/">Events</a><a href="https://tbarc.in/blog/">Blog</a><a href="https://tbarc.in/gallery/">Gallery</a></nav><a class="nav-cta" href="https://volunteer.tbarc.in/" rel="noopener noreferrer" target="_blank">Get involved <span aria-hidden="true" class="arrow">↗</span></a><button aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></div></header>
